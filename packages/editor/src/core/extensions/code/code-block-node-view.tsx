@@ -4,8 +4,8 @@
  * See the LICENSE file for details.
  */
 
-import type { Node as ProseMirrorNode } from "@tiptap/pm/model";
-import { NodeViewWrapper, NodeViewContent } from "@tiptap/react";
+import { NodeViewContent, NodeViewWrapper } from "@tiptap/react";
+import type { NodeViewProps } from "@tiptap/react";
 import ts from "highlight.js/lib/languages/typescript";
 import { common, createLowlight } from "lowlight";
 import { CheckIcon } from "lucide-react";
@@ -15,6 +15,9 @@ import { CopyIcon } from "@plane/propel/icons";
 import { Tooltip } from "@plane/propel/tooltip";
 // plane utils
 import { cn } from "@plane/utils";
+// local imports
+import { MermaidRenderer } from "./mermaid-renderer";
+import { isMermaidLanguage } from "./mermaid-utils";
 // types
 import type { TCodeBlockAttributes } from "./types";
 import { ECodeBlockAttributeNames } from "./types";
@@ -23,14 +26,14 @@ import { ECodeBlockAttributeNames } from "./types";
 const lowlight = createLowlight(common);
 lowlight.register("ts", ts);
 
-type Props = {
-  node: ProseMirrorNode;
-};
+type Props = Pick<NodeViewProps, "editor" | "node">;
 
-export function CodeBlockComponent({ node }: Props) {
+export function CodeBlockComponent({ editor, node }: Props) {
   const [copied, setCopied] = useState(false);
+  const [showDiagram, setShowDiagram] = useState(true);
   // derived values
   const attrs = node.attrs as TCodeBlockAttributes;
+  const isMermaid = isMermaidLanguage(attrs[ECodeBlockAttributeNames.LANGUAGE]);
 
   const copyToClipboard = async (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     try {
@@ -44,30 +47,51 @@ export function CodeBlockComponent({ node }: Props) {
     e.stopPropagation();
   };
 
+  const toggleDiagram = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setShowDiagram((value) => !value);
+  };
+
   return (
     <NodeViewWrapper key={attrs[ECodeBlockAttributeNames.ID]} className="code-block group/code relative">
-      <Tooltip tooltipContent="Copy code">
-        <button
-          type="button"
-          className={cn(
-            "group/button absolute top-2 right-2 z-10 hidden size-8 items-center justify-center rounded-md border border-subtle bg-layer-1 backdrop-blur-sm transition duration-150 ease-in-out group-hover/code:flex",
-            {
-              "bg-success-subtle hover:bg-success-subtle-1 active:bg-success-subtle-1": copied,
-            }
-          )}
-          onClick={(e) => void copyToClipboard(e)}
-        >
-          {copied ? (
-            <CheckIcon className="h-3 w-3 text-success-primary" strokeWidth={3} />
-          ) : (
-            <CopyIcon className="h-3 w-3 text-tertiary group-hover/button:text-primary" />
-          )}
-        </button>
-      </Tooltip>
+      <div className="pointer-events-none absolute top-2 right-2 z-10 flex items-center gap-1 opacity-0 transition-opacity group-focus-within/code:pointer-events-auto group-focus-within/code:opacity-100 group-hover/code:pointer-events-auto group-hover/code:opacity-100 max-md:pointer-events-auto max-md:opacity-100">
+        {isMermaid && editor.isEditable && (
+          <button
+            type="button"
+            className="rounded-md border border-subtle bg-layer-1 px-2 py-1.5 text-11 font-medium text-tertiary backdrop-blur-sm transition hover:bg-layer-2 hover:text-primary active:translate-y-px"
+            onClick={toggleDiagram}
+            aria-label={showDiagram ? "Show Mermaid source" : "Show Mermaid diagram"}
+          >
+            {showDiagram ? "Code" : "Diagram"}
+          </button>
+        )}
+        <Tooltip tooltipContent="Copy code">
+          <button
+            type="button"
+            className={cn(
+              "group/button flex size-8 items-center justify-center rounded-md border border-subtle bg-layer-1 backdrop-blur-sm transition duration-150 ease-in-out",
+              {
+                "bg-success-subtle hover:bg-success-subtle-1 active:bg-success-subtle-1": copied,
+              }
+            )}
+            onClick={(e) => void copyToClipboard(e)}
+          >
+            {copied ? (
+              <CheckIcon className="h-3 w-3 text-success-primary" strokeWidth={3} />
+            ) : (
+              <CopyIcon className="h-3 w-3 text-tertiary group-hover/button:text-primary" />
+            )}
+          </button>
+        </Tooltip>
+      </div>
 
-      <pre className="my-2 rounded-lg bg-layer-3 p-4 text-primary">
-        <NodeViewContent as="code" className="whitespace-pre-wrap" />
-      </pre>
+      {isMermaid && showDiagram && <MermaidRenderer code={node.textContent} />}
+      <div className={cn(isMermaid && showDiagram && "hidden")}>
+        <pre className="my-2 rounded-lg bg-layer-3 p-4 text-primary">
+          <NodeViewContent as="code" className="whitespace-pre-wrap" />
+        </pre>
+      </div>
     </NodeViewWrapper>
   );
 }

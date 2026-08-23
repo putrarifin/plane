@@ -6,6 +6,7 @@
 
 import type { IPaymentProduct, TBillingFrequency, TProductBillingFrequency } from "@plane/types";
 import { EProductSubscriptionEnum } from "@plane/types";
+import { PRODUCT_NAME } from "./brand";
 
 /**
  * Default billing frequency for each product subscription type
@@ -34,7 +35,7 @@ export const SUBSCRIPTION_WITH_BILLING_FREQUENCY = [
 export const PLANE_COMMUNITY_PRODUCTS: Record<string, IPaymentProduct> = {
   [EProductSubscriptionEnum.PRO]: {
     id: EProductSubscriptionEnum.PRO,
-    name: "Plane Pro",
+    name: `${PRODUCT_NAME} Pro`,
     description:
       "More views, more cycles powers, more pages features, new reports, and better dashboards are waiting to be unlocked.",
     type: "PRO",
@@ -61,9 +62,8 @@ export const PLANE_COMMUNITY_PRODUCTS: Record<string, IPaymentProduct> = {
   },
   [EProductSubscriptionEnum.BUSINESS]: {
     id: EProductSubscriptionEnum.BUSINESS,
-    name: "Plane Business",
-    description:
-      "The earliest packaging of Business at $10 a seat a month billed annually, $12 a seat a month billed monthly for Plane Cloud",
+    name: `${PRODUCT_NAME} Business`,
+    description: "Business capabilities for larger teams with advanced collaboration and workspace controls.",
     type: "BUSINESS",
     prices: [
       {
@@ -88,7 +88,7 @@ export const PLANE_COMMUNITY_PRODUCTS: Record<string, IPaymentProduct> = {
   },
   [EProductSubscriptionEnum.ENTERPRISE]: {
     id: EProductSubscriptionEnum.ENTERPRISE,
-    name: "Plane Enterprise",
+    name: `${PRODUCT_NAME} Enterprise`,
     description: "",
     type: "ENTERPRISE",
     prices: [

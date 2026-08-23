@@ -7,8 +7,7 @@
 export const PRODUCT_NAME = "Pranala";
 export const PRODUCT_FORMAL_NAME = "Pranala Work";
 export const PRODUCT_TAGLINE = "Semua pekerjaan terhubung.";
-export const PRODUCT_DESCRIPTION =
-  "Pranala Work menghubungkan rencana, pekerjaan, dan tim dalam satu ruang kerja.";
+export const PRODUCT_DESCRIPTION = "Pranala Work menghubungkan rencana, pekerjaan, dan tim dalam satu ruang kerja.";
 
 // The repository link is intentionally kept visible so users can inspect the modified source.
 export const SOURCE_REPOSITORY_URL = "https://github.com/putrarifin/plane";

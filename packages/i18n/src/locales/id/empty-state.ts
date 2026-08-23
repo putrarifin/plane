@@ -32,7 +32,7 @@ export default {
   },
   project_empty_state: {
     no_access: {
-      title: "Sepertinya Anda tidak memiliki akses ke Proyek ini",
+      title: "Sepertinya Anda tidak memiliki akses ke proyek ini",
       restricted_description: "Hubungi admin untuk meminta akses agar Anda dapat melanjutkan di sini.",
       join_description: "Klik tombol di bawah ini untuk bergabung.",
       cta_primary: "Bergabung dengan proyek",
@@ -49,7 +49,7 @@ export default {
       cta_primary: "Buat item kerja pertama Anda",
     },
     cycles: {
-      title: "Kelompokkan dan batasi waktu pekerjaan Anda dalam Siklus.",
+      title: "Kelompokkan pekerjaan dan atur batas waktunya dalam siklus.",
       description:
         "Pecah pekerjaan menjadi potongan dengan batas waktu, bekerja mundur dari tenggat proyek Anda untuk menetapkan tanggal, dan buat kemajuan nyata sebagai tim.",
       cta_primary: "Atur siklus pertama Anda",
@@ -62,7 +62,7 @@ export default {
       cta_secondary: "Tambahkan item kerja yang ada",
     },
     modules: {
-      title: "Petakan tujuan proyek Anda ke Modul dan lacak dengan mudah.",
+      title: "Petakan tujuan proyek Anda ke modul dan lacak kemajuannya dengan mudah.",
       description:
         "Modul terdiri dari item kerja yang saling berhubungan. Mereka membantu dalam memantau kemajuan melalui fase proyek, masing-masing dengan tenggat waktu dan analitik khusus untuk menunjukkan seberapa dekat Anda dengan mencapai fase tersebut.",
       cta_primary: "Atur modul pertama Anda",
@@ -94,19 +94,19 @@ export default {
       title: "Dokumentasikan segalanya — dari catatan hingga PRD",
       description:
         "Halaman memungkinkan Anda menangkap dan mengorganisir informasi di satu tempat. Tulis catatan rapat, dokumentasi proyek, dan PRD, sematkan item kerja, dan strukturkan dengan komponen siap pakai.",
-      cta_primary: "Buat Halaman pertama Anda",
+      cta_primary: "Buat halaman pertama Anda",
     },
     archive_pages: {
       title: "Belum ada halaman yang diarsipkan",
-      description: "Arsipkan halaman yang tidak ada dalam radar Anda. Akses di sini saat dibutuhkan.",
+      description: "Arsipkan halaman yang sedang tidak Anda pantau. Akses kembali di sini saat dibutuhkan.",
     },
     intake_sidebar: {
-      title: "Catat permintaan Masuk",
+      title: "Catat permintaan Intake",
       description: "Kirim permintaan baru untuk ditinjau, diprioritaskan, dan dilacak dalam alur kerja proyek Anda.",
-      cta_primary: "Buat permintaan Masuk",
+      cta_primary: "Buat permintaan Intake",
     },
     intake_main: {
-      title: "Pilih item kerja Masuk untuk melihat detailnya",
+      title: "Pilih item kerja Intake untuk melihat detailnya",
     },
   },
   workspace_empty_state: {
@@ -150,7 +150,7 @@ export default {
     drafts: {
       title: "Item kerja setengah jadi",
       description:
-        "Untuk mencoba ini, mulai menambahkan item kerja dan tinggalkan di tengah jalan atau buat draf pertama Anda di bawah ini. 😉",
+        "Untuk mencobanya, tambahkan item kerja lalu biarkan setengah jadi, atau buat draf pertama Anda di bawah ini. 😉",
       cta_primary: "Buat item kerja draf",
     },
     projects_archived: {
@@ -162,23 +162,23 @@ export default {
     },
     analytics_work_items: {
       title:
-        "Buat proyek dengan item kerja dan penerima tugas untuk mulai melacak kinerja, kemajuan, dan dampak tim di sini.",
+        "Buat proyek dengan item kerja dan penanggung jawab untuk mulai melacak kinerja, kemajuan, dan dampak tim di sini.",
     },
     analytics_no_cycle: {
       title:
-        "Buat siklus untuk mengorganisir pekerjaan ke dalam fase berbatas waktu dan melacak kemajuan di seluruh sprint.",
+        "Buat siklus untuk mengatur pekerjaan ke dalam fase berbatas waktu dan melacak kemajuan di seluruh sprint.",
     },
     analytics_no_module: {
-      title: "Buat modul untuk mengorganisir pekerjaan Anda dan melacak kemajuan di berbagai tahap.",
+      title: "Buat modul untuk mengatur pekerjaan Anda dan melacak kemajuan di berbagai tahap.",
     },
     analytics_no_intake: {
-      title: "Siapkan masukan untuk mengelola permintaan masuk dan melacak bagaimana mereka diterima dan ditolak",
+      title: "Siapkan Intake untuk mengelola permintaan yang masuk dan melacak mana yang diterima atau ditolak.",
     },
   },
   settings_empty_state: {
     estimates: {
       title: "Belum ada estimasi",
-      description: "Tentukan bagaimana tim Anda mengukur upaya dan lacak secara konsisten di semua item kerja.",
+      description: "Tentukan cara tim mengukur upaya dan lacak secara konsisten di semua item kerja.",
       cta_primary: "Tambahkan sistem estimasi",
     },
     labels: {
@@ -193,13 +193,13 @@ export default {
         "Anda tidak memiliki catatan ekspor saat ini. Setelah Anda mengekspor data, semua catatan akan muncul di sini.",
     },
     tokens: {
-      title: "Belum ada token Pribadi",
+      title: "Belum ada token akses pribadi",
       description:
         "Hasilkan token API yang aman untuk menghubungkan ruang kerja Anda dengan sistem dan aplikasi eksternal.",
       cta_primary: "Tambahkan token API",
     },
     webhooks: {
-      title: "Belum ada Webhook yang ditambahkan",
+      title: "Belum ada webhook yang ditambahkan",
       description: "Otomatisasi notifikasi ke layanan eksternal ketika peristiwa proyek terjadi.",
       cta_primary: "Tambahkan webhook",
     },

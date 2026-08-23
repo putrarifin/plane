@@ -10,7 +10,7 @@ export default {
     pages: "Halaman",
     new_work_item: "Item kerja baru",
     home: "Beranda",
-    your_work: "Pekerjaan anda",
+    your_work: "Pekerjaan Anda",
     inbox: "Inbox",
     workspace: "Workspace",
     views: "Views",
@@ -58,7 +58,7 @@ export default {
         },
         errors: {
           match: "Password tidak cocok",
-          empty: "Silakan masukkan password anda",
+          empty: "Silakan masukkan password Anda",
           length: "Panjang password harus lebih dari 8 karakter",
           strength: {
             weak: "Password lemah",
@@ -73,7 +73,7 @@ export default {
               message: "Password berhasil diubah.",
             },
             error: {
-              title: "Error!",
+              title: "Kesalahan!",
               message: "Terjadi kesalahan. Silakan coba lagi.",
             },
           },
@@ -82,7 +82,7 @@ export default {
       unique_code: {
         label: "Kode unik",
         placeholder: "123456",
-        paste_code: "Tempelkan kode yang dikirim ke email anda",
+        paste_code: "Tempelkan kode yang dikirim ke email Anda",
         requesting_new_code: "Meminta kode baru",
         sending_code: "Mengirim kode",
       },
@@ -97,7 +97,7 @@ export default {
     },
     sign_up: {
       header: {
-        label: "Buat akun untuk mulai mengelola pekerjaan dengan tim anda.",
+        label: "Buat akun untuk mulai mengelola pekerjaan bersama tim Anda.",
         step: {
           email: {
             header: "Daftar",
@@ -121,7 +121,7 @@ export default {
     },
     sign_in: {
       header: {
-        label: "Masuk untuk mulai mengelola pekerjaan dengan tim anda.",
+        label: "Masuk untuk mulai mengelola pekerjaan bersama tim Anda.",
         step: {
           email: {
             header: "Masuk atau daftar",
@@ -129,7 +129,7 @@ export default {
           },
           password: {
             header: "Masuk atau daftar",
-            sub_header: "Gunakan kombinasi email-password anda untuk masuk.",
+            sub_header: "Gunakan kombinasi email dan password Anda untuk masuk.",
           },
           unique_code: {
             header: "Masuk atau daftar",
@@ -139,39 +139,39 @@ export default {
       },
     },
     forgot_password: {
-      title: "Reset password anda",
+      title: "Atur ulang password Anda",
       description:
-        "Masukkan alamat email akun anda yang telah diverifikasi dan kami akan mengirimkan link reset password.",
-      email_sent: "Kami telah mengirim link reset ke alamat email anda",
-      send_reset_link: "Kirim link reset",
+        "Masukkan alamat email akun Anda yang sudah terverifikasi. Kami akan mengirimkan tautan untuk mengatur ulang password.",
+      email_sent: "Tautan untuk mengatur ulang password sudah dikirim ke alamat email Anda.",
+      send_reset_link: "Kirim tautan reset",
       errors: {
         smtp_not_enabled:
-          "Kami melihat bahwa admin anda belum mengaktifkan SMTP, kami tidak dapat mengirimkan link reset password",
+          "Admin Anda belum mengaktifkan SMTP, jadi kami tidak dapat mengirimkan tautan untuk mengatur ulang password.",
       },
       toast: {
         success: {
           title: "Email terkirim",
           message:
-            "Periksa inbox anda untuk link reset password. Jika tidak muncul dalam beberapa menit, periksa folder spam.",
+            "Periksa inbox Anda untuk tautan reset password. Jika belum muncul dalam beberapa menit, periksa folder spam.",
         },
         error: {
-          title: "Error!",
+          title: "Kesalahan!",
           message: "Terjadi kesalahan. Silakan coba lagi.",
         },
       },
     },
     reset_password: {
       title: "Atur password baru",
-      description: "Amankan akun anda dengan password yang kuat",
+      description: "Amankan akun Anda dengan password yang kuat.",
     },
     set_password: {
-      title: "Amankan akun anda",
-      description: "Mengatur password membantu anda masuk dengan aman",
+      title: "Amankan akun Anda",
+      description: "Mengatur password membantu Anda masuk dengan aman.",
     },
     sign_out: {
       toast: {
         error: {
-          title: "Error!",
+          title: "Kesalahan!",
           message: "Gagal keluar. Silakan coba lagi.",
         },
       },
@@ -181,7 +181,7 @@ export default {
   cancel: "Batal",
   loading: "Memuat",
   error: "Kesalahan",
-  success: "Sukses",
+  success: "Berhasil",
   warning: "Peringatan",
   info: "Info",
   close: "Tutup",
@@ -222,19 +222,25 @@ export default {
   your_account: "Akun Anda",
   security: "Keamanan",
   activity: "Aktivitas",
+  preferences: "Preferensi",
+  language_and_time: "Bahasa & waktu",
   appearance: "Tampilan",
   notifications: "Notifikasi",
   workspaces: "Ruang kerja",
   create_workspace: "Buat ruang kerja",
   invitations: "Undangan",
   summary: "Ringkasan",
-  assigned: "Ditetapkan",
+  assigned: "Ditugaskan",
   created: "Dibuat",
-  subscribed: "Berlangganan",
+  subscribed: "Diikuti",
   you_do_not_have_the_permission_to_access_this_page: "Anda tidak memiliki izin untuk mengakses halaman ini.",
   something_went_wrong_please_try_again: "Terjadi kesalahan. Silakan coba lagi.",
   load_more: "Muat lebih banyak",
   select_or_customize_your_interface_color_scheme: "Pilih atau sesuaikan skema warna antarmuka Anda.",
+  timezone_setting: "Pengaturan zona waktu saat ini.",
+  language_setting: "Pilih bahasa yang digunakan di antarmuka pengguna.",
+  settings_moved_to_preferences: "Pengaturan zona waktu dan bahasa telah dipindahkan ke preferensi.",
+  go_to_preferences: "Buka preferensi",
   theme: "Tema",
   system_preference: "Preferensi sistem",
   light: "Terang",
@@ -261,20 +267,20 @@ export default {
   failed_to_update_the_theme: "Gagal memperbarui tema",
   email_notifications: "Notifikasi email",
   stay_in_the_loop_on_issues_you_are_subscribed_to_enable_this_to_get_notified:
-    "Tetap terupdate tentang item kerja yang Anda langgani. Aktifkan ini untuk mendapatkan notifikasi.",
+    "Dapatkan pembaruan tentang item kerja yang Anda ikuti. Aktifkan untuk menerima notifikasi.",
   email_notification_setting_updated_successfully: "Pengaturan notifikasi email berhasil diperbarui",
   failed_to_update_email_notification_setting: "Gagal memperbarui pengaturan notifikasi email",
   notify_me_when: "Beri tahu saya ketika",
   property_changes: "Perubahan properti",
   property_changes_description:
-    "Beri tahu saya ketika properti item kerja seperti penugasannya, prioritas, estimasi, atau hal lainnya berubah.",
+    "Beri tahu saya ketika properti item kerja seperti penanggung jawabnya, prioritas, estimasi, atau hal lainnya berubah.",
   state_change: "Perubahan status",
   state_change_description: "Beri tahu saya ketika item kerja berpindah ke status yang berbeda",
   issue_completed: "Item kerja selesai",
   issue_completed_description: "Beri tahu saya hanya ketika item kerja selesai",
   comments: "Komentar",
   comments_description: "Beri tahu saya ketika seseorang meninggalkan komentar pada item kerja",
-  mentions: "Sebutkan",
+  mentions: "Mention",
   mentions_description: "Beri tahu saya hanya ketika seseorang menyebut saya dalam komentar atau deskripsi",
   old_password: "Kata sandi lama",
   general_settings: "Pengaturan umum",
@@ -384,7 +390,7 @@ export default {
   cycles: "Siklus",
   modules: "Modul",
   pages: "Halaman",
-  intake: "Penerimaan",
+  intake: "Intake",
   time_tracking: "Pelacakan waktu",
   work_management: "Manajemen kerja",
   projects_and_issues: "Proyek dan item kerja",
@@ -455,10 +461,10 @@ export default {
   discard: "Buang",
   duplicate_issue_found: "Item kerja duplikat ditemukan",
   duplicate_issues_found: "Item kerja duplikat ditemukan",
-  no_matching_results: "Tidak ada hasil yang cocok",
+  no_matching_results: "Tidak ditemukan hasil yang cocok",
   title_is_required: "Judul diperlukan",
   title: "Judul",
-  state: "Negara",
+  state: "Status",
   priority: "Prioritas",
   none: "Tidak ada",
   urgent: "Penting",
@@ -466,15 +472,15 @@ export default {
   medium: "Sedang",
   low: "Rendah",
   members: "Anggota",
-  assignee: "Penugas",
-  assignees: "Penugas",
+  assignee: "Penanggung jawab",
+  assignees: "Penanggung jawab",
   you: "Anda",
   labels: "Label",
   create_new_label: "Buat label baru",
   start_date: "Tanggal mulai",
   end_date: "Tanggal akhir",
   due_date: "Tanggal jatuh tempo",
-  estimate: "Perkiraan",
+  estimate: "Estimasi",
   change_parent_issue: "Ubah item kerja induk",
   remove_parent_issue: "Hapus item kerja induk",
   add_parent: "Tambahkan induk",
@@ -483,7 +489,7 @@ export default {
   required: "Diperlukan",
   optional: "Opsional",
   Cancel: "Batal",
-  edit: "Sunting",
+  edit: "Edit",
   archive: "Arsip",
   restore: "Pulihkan",
   open_in_new_tab: "Buka di tab baru",
@@ -510,8 +516,8 @@ export default {
   work_items: "Item kerja",
   add_link: "Tambahkan tautan",
   points: "Poin",
-  no_assignee: "Tidak ada penugas",
-  no_assignees_yet: "Belum ada penugas",
+  no_assignee: "Belum ada penanggung jawab",
+  no_assignees_yet: "Belum ada penanggung jawab",
   no_labels_yet: "Belum ada label",
   ideal: "Ideal",
   current: "Saat ini",
@@ -519,9 +525,9 @@ export default {
   leaving: "Meninggalkan",
   removing: "Menghapus",
   leave: "Tinggalkan",
-  refresh: "Segarkan",
-  refreshing: "Menyegarkan",
-  refresh_status: "Status segar",
+  refresh: "Muat ulang",
+  refreshing: "Memuat ulang",
+  refresh_status: "Muat ulang status",
   prev: "Sebelumnya",
   next: "Selanjutnya",
   re_generating: "Menghasilkan kembali",
@@ -530,6 +536,11 @@ export default {
   export: "Ekspor",
   member: "{count, plural, one{# anggota} other{# anggota}}",
   new_password_must_be_different_from_old_password: "Kata sandi baru harus berbeda dari kata sandi lama",
+  edited: "diedit",
+  bot: "Bot",
+  settings_description:
+    "Kelola preferensi akun, workspace, dan proyek Anda di satu tempat. Beralih antar-tab untuk mengaturnya dengan mudah.",
+  back_to_workspace: "Kembali ke workspace",
   project_view: {
     sort_by: {
       created_at: "Dibuat pada",
@@ -538,7 +549,7 @@ export default {
     },
   },
   toast: {
-    success: "Sukses!",
+    success: "Berhasil!",
     error: "Kesalahan!",
   },
   links: {
@@ -634,7 +645,7 @@ export default {
     },
     manage_widgets: "Kelola widget",
     title: "Beranda",
-    star_us_on_github: "Bintang kami di GitHub",
+    star_us_on_github: "Beri kami bintang di GitHub",
   },
   link: {
     modal: {
@@ -653,10 +664,10 @@ export default {
     all: "Semua",
     no_items_in_this_group: "Tidak ada item dalam grup ini",
     drop_here_to_move: "Letakkan di sini untuk memindahkan",
-    states: "Negara-negara",
-    state: "Negara",
-    state_groups: "Kelompok negara",
-    state_group: "Kelompok negara",
+    states: "Status",
+    state: "Status",
+    state_groups: "Grup status",
+    state_group: "Grup status",
     priorities: "Prioritas",
     priority: "Prioritas",
     team_project: "Proyek tim",
@@ -667,13 +678,13 @@ export default {
     modules: "Modul",
     labels: "Label",
     label: "Label",
-    assignees: "Penugas",
-    assignee: "Penugas",
+    assignees: "Penanggung jawab",
+    assignee: "Penanggung jawab",
     created_by: "Dibuat oleh",
     none: "Tidak ada",
     link: "Tautan",
-    estimates: "Perkiraan",
-    estimate: "Perkiraan",
+    estimates: "Estimasi",
+    estimate: "Estimasi",
     created_at: "Dibuat pada",
     completed_at: "Selesai pada",
     layout: "Tata letak",
@@ -683,7 +694,7 @@ export default {
     activity: "Aktivitas",
     analytics: "Analitik",
     dates: "Tanggal",
-    success: "Sukses!",
+    success: "Berhasil!",
     something_went_wrong: "Ada yang salah",
     error: {
       label: "Kesalahan!",
@@ -716,7 +727,7 @@ export default {
     update_project: "Perbarui proyek",
     identifier_already_exists: "Pengidentifikasi sudah ada",
     add_more: "Tambah lebih banyak",
-    defaults: "Pola dasar",
+    defaults: "Default",
     add_label: "Tambah label",
     customize_time_range: "Sesuaikan rentang waktu",
     loading: "Memuat",
@@ -775,7 +786,7 @@ export default {
     errors: {
       default: {
         title: "Kesalahan!",
-        message: "Sesuatu telah salah. Silakan coba lagi.",
+        message: "Terjadi kesalahan. Silakan coba lagi.",
       },
       required: "Bidang ini diperlukan",
       entity_required: "{entity} diperlukan",
@@ -791,10 +802,10 @@ export default {
     link_title_placeholder: "Apa yang ingin Anda lihat pada tautan ini",
     url: "URL",
     side_peek: "Tampilan samping",
-    modal: "Modal",
+    modal: "Dialog",
     full_screen: "Layar penuh",
-    close_peek_view: "Tutup tampilan peek",
-    toggle_peek_view_layout: "Alihkan tata letak tampilan peek",
+    close_peek_view: "Tutup tampilan samping",
+    toggle_peek_view_layout: "Ubah tata letak tampilan samping",
     options: "Opsi",
     duration: "Durasi",
     today: "Hari ini",
@@ -806,8 +817,8 @@ export default {
     search: {
       label: "Pencarian",
       placeholder: "Ketik untuk mencari",
-      no_matches_found: "Tidak ada kecocokan ditemukan",
-      no_matching_results: "Tidak ada hasil yang cocok",
+      no_matches_found: "Tidak ditemukan kecocokan",
+      no_matching_results: "Tidak ditemukan hasil yang cocok",
     },
     actions: {
       edit: "Edit",
@@ -818,12 +829,13 @@ export default {
       restore: "Pulihkan",
       delete: "Hapus",
       remove_relation: "Hapus hubungan",
-      subscribe: "Berlangganan",
-      unsubscribe: "Berhenti berlangganan",
+      subscribe: "Ikuti",
+      unsubscribe: "Berhenti mengikuti",
       clear_sorting: "Hapus pengurutan",
       show_weekends: "Tampilkan akhir pekan",
       enable: "Aktifkan",
       disable: "Nonaktifkan",
+      copy_markdown: "Salin markdown",
     },
     name: "Nama",
     discard: "Buang",
@@ -846,7 +858,7 @@ export default {
     next: "Selanjutnya",
     back: "Kembali",
     cancelling: "Membatalkan",
-    configuring: "Mengkonfigurasi",
+    configuring: "Mengonfigurasi",
     clear: "Bersihkan",
     import: "Impor",
     connect: "Sambungkan",
@@ -885,7 +897,7 @@ export default {
     you: "Anda",
     upgrade_cta: {
       higher_subscription: "Tingkatkan ke langganan yang lebih tinggi",
-      talk_to_sales: "Bicaralah dengan Penjualan",
+      talk_to_sales: "Hubungi tim Sales",
     },
     category: "Kategori",
     categories: "Kategori",
@@ -898,20 +910,21 @@ export default {
     view: "Lihat",
     deactivated_user: "Pengguna dinonaktifkan",
     apply: "Terapkan",
-    applying: "Terapkan",
+    applying: "Menerapkan",
+    overview: "Ikhtisar",
     users: "Pengguna",
     admins: "Admin",
     guests: "Tamu",
-    on_track: "Sesuai Jalur",
+    on_track: "Sesuai jalur",
     off_track: "Menyimpang",
-    at_risk: "Dalam risiko",
+    at_risk: "Berisiko",
     timeline: "Linimasa",
     completion: "Penyelesaian",
     upcoming: "Mendatang",
     completed: "Selesai",
     in_progress: "Sedang berlangsung",
     planned: "Direncanakan",
-    paused: "Dijedaikan",
+    paused: "Dijeda",
     no_of: "Jumlah {entity}",
     resolved: "Terselesaikan",
   },
@@ -986,7 +999,7 @@ export default {
         success: "{count, plural, one {Item Kerja} other {Item Kerja}} berhasil ditambahkan ke siklus.",
         loading: "Menambahkan {count, plural, one {item kerja} other {item kerja}} ke siklus",
       },
-      assignee: "Tambah penugasan",
+      assignee: "Tambahkan penanggung jawab",
       start_date: "Tambah tanggal mulai",
       due_date: "Tambah tanggal jatuh tempo",
       parent: "Tambah item kerja induk",
@@ -1041,16 +1054,16 @@ export default {
     layouts: {
       ordered_by_label: "Tata letak ini diurutkan berdasarkan",
       list: "Daftar",
-      kanban: "Papan",
+      kanban: "Kanban",
       calendar: "Kalender",
       spreadsheet: "Tabel",
-      gantt: "Garis Waktu",
+      gantt: "Gantt",
       title: {
         list: "Tata Letak Daftar",
-        kanban: "Tata Letak Papan",
+        kanban: "Tata letak Kanban",
         calendar: "Tata Letak Kalender",
         spreadsheet: "Tata Letak Tabel",
-        gantt: "Tata Letak Garis Waktu",
+        gantt: "Tata letak Gantt",
       },
     },
     states: {
@@ -1101,7 +1114,7 @@ export default {
       confirm_message:
         "Apakah Anda yakin ingin mengarsipkan item kerja ini? Semua item kerja yang diarsipkan dapat dipulihkan nanti.",
       success: {
-        label: "Sukses mengarsipkan",
+        label: "Berhasil mengarsipkan",
         message: "Arsip Anda dapat ditemukan di arsip proyek.",
       },
       failed: {
@@ -1110,7 +1123,7 @@ export default {
     },
     restore: {
       success: {
-        title: "Sukses memulihkan",
+        title: "Berhasil memulihkan",
         message: "Item kerja Anda dapat ditemukan di item kerja proyek.",
       },
       failed: {
@@ -1130,8 +1143,8 @@ export default {
     },
     subscription: {
       actions: {
-        subscribed: "Item kerja telah berhasil disubscribe",
-        unsubscribed: "Item kerja telah berhasil dibatalkan subscribe",
+        subscribed: "Item kerja berhasil diikuti",
+        unsubscribed: "Item kerja tidak lagi diikuti",
       },
     },
     select: {
@@ -1248,10 +1261,10 @@ export default {
       updated_at: "Diperbarui pada",
       id: "ID",
     },
-    label: "Pendapat",
-    page_label: "{workspace} - Pendapat",
+    label: "Intake",
+    page_label: "{workspace} - Intake",
     modal: {
-      title: "Buat item kerja pendapat",
+      title: "Buat item kerja Intake",
     },
     tabs: {
       open: "Terbuka",
@@ -1269,7 +1282,7 @@ export default {
       sidebar_filter: {
         title: "Tidak ada item kerja yang cocok",
         description:
-          "Tidak ada item kerja yang cocok dengan filter yang diterapkan dalam pendapat. Buat item kerja baru.",
+          "Tidak ada item kerja yang cocok dengan filter yang diterapkan dalam Intake. Buat item kerja baru.",
       },
       detail: {
         title: "Pilih item kerja untuk melihat detailnya.",
@@ -1319,7 +1332,7 @@ export default {
     },
     toast: {
       success: {
-        title: "Sukses",
+        title: "Berhasil",
         message: "Ruang kerja berhasil dibuat",
       },
       error: {
@@ -1360,7 +1373,7 @@ export default {
     },
     work_items_closed_in_a_year: {
       title: "Item kerja yang ditutup dalam setahun",
-      empty_state: "Tutup item kerja untuk melihat analisis dari item kerja tersebut dalam bentuk grafik.",
+      empty_state: "Tutup item kerja untuk melihat analisisnya dalam bentuk grafik.",
     },
     most_work_items_created: {
       title: "Paling banyak item kerja yang dibuat",
@@ -1376,7 +1389,7 @@ export default {
     },
     empty_state: {
       customized_insights: {
-        description: "Item pekerjaan yang ditugaskan kepada Anda, dipecah berdasarkan status, akan muncul di sini.",
+        description: "Item kerja yang ditugaskan kepada Anda, dikelompokkan berdasarkan status, akan muncul di sini.",
         title: "Belum ada data",
       },
       created_vs_resolved: {
@@ -1385,12 +1398,12 @@ export default {
       },
       project_insights: {
         title: "Belum ada data",
-        description: "Item pekerjaan yang ditugaskan kepada Anda, dipecah berdasarkan status, akan muncul di sini.",
+        description: "Item kerja yang ditugaskan kepada Anda, dikelompokkan berdasarkan status, akan muncul di sini.",
       },
       general: {
         title: "Lacak kemajuan, beban kerja, dan alokasi. Temukan tren, hapus hambatan, dan percepat pekerjaan",
         description:
-          "Lihat lingkup versus permintaan, perkiraan, dan perluasan lingkup. Dapatkan kinerja berdasarkan anggota tim dan tim, dan pastikan proyek Anda berjalan tepat waktu.",
+          "Lihat lingkup versus permintaan, estimasi, dan perluasan lingkup. Dapatkan kinerja berdasarkan anggota tim dan tim, dan pastikan proyek Anda berjalan tepat waktu.",
         primary_button: {
           text: "Mulai proyek pertama Anda",
           comic: {
@@ -1414,7 +1427,7 @@ export default {
     total_projects: "Total Proyek",
     total_admins: "Total Admin",
     total_users: "Total Pengguna",
-    total_intake: "Total Pemasukan",
+    total_intake: "Total Intake",
     un_started_work_items: "{entity} yang belum dimulai",
     total_guests: "Total Tamu",
     completed_work_items: "{entity} yang telah selesai",
@@ -1466,7 +1479,7 @@ export default {
       general: {
         title: "Tidak ada proyek aktif",
         description:
-          "Anggap setiap proyek sebagai induk untuk pekerjaan yang terarah pada tujuan. Proyek adalah tempat di mana Pekerjaan, Siklus, dan Modul tinggal dan, bersama rekan-rekan Anda, membantu Anda mencapai tujuan tersebut. Buat proyek baru atau filter untuk proyek yang diarsipkan.",
+          "Anggap setiap proyek sebagai wadah untuk pekerjaan yang berorientasi pada tujuan. Di sinilah item kerja, siklus, dan modul berada untuk membantu Anda mencapai tujuan bersama tim. Buat proyek baru atau tampilkan proyek yang diarsipkan.",
         primary_button: {
           text: "Mulai proyek pertama Anda",
           comic: {
@@ -1489,11 +1502,10 @@ export default {
       },
       filter: {
         title: "Tidak ada proyek yang cocok",
-        description:
-          "Tidak ada proyek yang terdeteksi dengan kriteria yang cocok. \n Buat proyek baru sebagai gantinya.",
+        description: "Tidak ada proyek yang sesuai dengan kriteria. \nBuat proyek baru sebagai gantinya.",
       },
       search: {
-        description: "Tidak ada proyek yang terdeteksi dengan kriteria yang cocok.\nBuat proyek baru sebagai gantinya",
+        description: "Tidak ada proyek yang sesuai dengan kriteria.\nBuat proyek baru sebagai gantinya.",
       },
     },
   },
@@ -1510,7 +1522,7 @@ export default {
       },
       assigned: {
         title: "Belum ada item kerja",
-        description: "Item kerja yang ditugaskan kepada Anda dapat dilacak dari sini.",
+        description: "Item kerja yang ditugaskan kepada Anda dapat dilacak di sini.",
         primary_button: {
           text: "Buat item kerja baru",
         },
@@ -1524,11 +1536,11 @@ export default {
       },
       subscribed: {
         title: "Belum ada item kerja",
-        description: "Langgan item kerja yang Anda minati, lacak semuanya di sini.",
+        description: "Ikuti item kerja yang Anda minati dan lacak semuanya di sini.",
       },
       "custom-view": {
         title: "Belum ada item kerja",
-        description: "Item kerja yang menerapkan filter ini, lacak semuanya di sini.",
+        description: "Item kerja yang sesuai dengan filter ini akan muncul di sini.",
       },
     },
     delete_view: {
@@ -1577,6 +1589,25 @@ export default {
         },
       },
     },
+    preferences: {
+      heading: "Preferensi",
+      description: "Sesuaikan pengalaman aplikasi dengan cara kerja Anda.",
+    },
+    notifications: {
+      heading: "Notifikasi email",
+      description: "Dapatkan pembaruan tentang item kerja yang Anda ikuti. Aktifkan untuk menerima notifikasi.",
+    },
+    security: {
+      heading: "Keamanan",
+    },
+    api_tokens: {
+      heading: "Token akses pribadi",
+      description: "Buat token API yang aman untuk mengintegrasikan data dengan sistem dan aplikasi eksternal.",
+    },
+    activity: {
+      heading: "Aktivitas",
+      description: "Lacak tindakan dan perubahan terbaru Anda di semua proyek dan item kerja.",
+    },
   },
   workspace_settings: {
     label: "Pengaturan ruang kerja",
@@ -1597,7 +1628,7 @@ export default {
         update_workspace: "Perbarui ruang kerja",
         delete_workspace: "Hapus ruang kerja ini",
         delete_workspace_description:
-          "Ketika menghapus ruang kerja, semua data dan sumber daya di dalam ruang kerja tersebut akan dihapus secara permanen dan tidak dapat dipulihkan.",
+          "Saat ruang kerja dihapus, semua data dan sumber dayanya akan dihapus permanen dan tidak dapat dipulihkan.",
         delete_btn: "Hapus ruang kerja ini",
         delete_modal: {
           title: "Apakah Anda yakin ingin menghapus ruang kerja ini?",
@@ -1649,16 +1680,22 @@ export default {
         },
       },
       billing_and_plans: {
+        heading: "Penagihan & paket",
+        description: "Pilih paket, kelola langganan, dan tingkatkan paket sesuai kebutuhan Anda.",
         title: "Penagihan & Rencana",
         current_plan: "Rencana saat ini",
         free_plan: "Anda saat ini menggunakan rencana gratis",
         view_plans: "Lihat rencana",
       },
       exports: {
+        heading: "Ekspor",
+        description: "Ekspor data proyek dalam berbagai format dan akses riwayat ekspor melalui tautan unduhan.",
         title: "Ekspor",
-        exporting: "Mengeskpor",
+        exporting: "Mengekspor",
         previous_exports: "Ekspor sebelumnya",
         export_separate_files: "Ekspor data ke file terpisah",
+        exporting_projects: "Mengekspor proyek",
+        format: "Format",
         filters_info: "Terapkan filter untuk mengekspor item kerja tertentu berdasarkan kriteria Anda.",
         modal: {
           title: "Ekspor ke",
@@ -1675,6 +1712,8 @@ export default {
         },
       },
       webhooks: {
+        heading: "Webhook",
+        description: "Otomatiskan notifikasi ke layanan eksternal saat terjadi peristiwa dalam proyek.",
         title: "Webhook",
         add_webhook: "Tambah webhook",
         modal: {
@@ -1737,7 +1776,7 @@ export default {
           description:
             "Setiap aplikasi yang menggunakan token ini tidak akan memiliki akses ke data Pranala. Tindakan ini tidak dapat dibatalkan.",
           success: {
-            title: "Sukses!",
+            title: "Berhasil!",
             message: "Token API telah berhasil dihapus",
           },
           error: {
@@ -1780,7 +1819,7 @@ export default {
       overview: "Ikhtisar",
       created: "Item kerja yang dibuat",
       assigned: "Item kerja yang ditugaskan",
-      subscribed: "Item kerja yang disubscribe",
+      subscribed: "Item kerja yang diikuti",
       state_distribution: {
         title: "Item kerja berdasarkan status",
         empty: "Buat item kerja untuk melihatnya berdasarkan status dalam grafik untuk analisis yang lebih baik.",
@@ -1800,14 +1839,16 @@ export default {
       profile: "Profil",
       security: "Keamanan",
       activity: "Aktivitas",
+      preferences: "Preferensi",
       appearance: "Tampilan",
       notifications: "Notifikasi",
+      "api-tokens": "Token akses pribadi",
     },
     tabs: {
       summary: "Ringkasan",
       assigned: "Ditugaskan",
       created: "Dibuat",
-      subscribed: "Disubscribe",
+      subscribed: "Diikuti",
       activity: "Aktivitas",
     },
     empty_state: {
@@ -1818,15 +1859,15 @@ export default {
       },
       assigned: {
         title: "Tidak ada item kerja yang ditugaskan kepada Anda",
-        description: "Item kerja yang ditugaskan kepada Anda dapat dilacak dari sini.",
+        description: "Item kerja yang ditugaskan kepada Anda dapat dilacak di sini.",
       },
       created: {
         title: "Belum ada item kerja",
-        description: "Semua item kerja yang dibuat oleh Anda hadir di sini, dan lacak langsung di sini.",
+        description: "Semua item kerja yang Anda buat akan muncul di sini. Lacak langsung dari sini.",
       },
       subscribed: {
         title: "Belum ada item kerja",
-        description: "Langganan item kerja yang Anda minati, lacak semuanya di sini.",
+        description: "Ikuti item kerja yang Anda minati dan lacak semuanya di sini.",
       },
     },
   },
@@ -1843,7 +1884,7 @@ export default {
       delete_project: {
         title: "Hapus proyek",
         description:
-          "Ketika menghapus proyek, semua data dan sumber daya di dalam proyek tersebut akan dihapus secara permanen dan tidak dapat dipulihkan.",
+          "Saat proyek dihapus, semua data dan sumber dayanya akan dihapus permanen dan tidak dapat dipulihkan.",
         button: "Hapus proyek saya",
       },
       toast: {
@@ -1854,7 +1895,7 @@ export default {
     members: {
       label: "Anggota",
       project_lead: "Pemimpin proyek",
-      default_assignee: "Penugas default",
+      default_assignee: "Penanggung jawab default",
       guest_super_permissions: {
         title: "Beri akses tampilan untuk semua item kerja untuk pengguna tamu:",
         sub_heading: "Ini akan memungkinkan tamu untuk memiliki akses tampilan ke semua item kerja proyek.",
@@ -1866,6 +1907,8 @@ export default {
       },
     },
     states: {
+      heading: "Status",
+      description: "Tentukan dan sesuaikan status alur kerja untuk melacak kemajuan item kerja.",
       describe_this_state_for_your_members: "Jelaskan status ini untuk anggota Anda.",
       empty_state: {
         title: "Tidak ada status yang tersedia untuk grup {groupKey}",
@@ -1873,6 +1916,8 @@ export default {
       },
     },
     labels: {
+      heading: "Label",
+      description: "Buat label khusus untuk mengategorikan dan mengatur item kerja.",
       label_title: "Judul label",
       label_title_is_required: "Judul label diperlukan",
       label_max_char: "Nama label tidak boleh lebih dari 255 karakter",
@@ -1881,68 +1926,70 @@ export default {
       },
     },
     estimates: {
-      label: "Perkiraan",
-      title: "Aktifkan perkiraan untuk proyek saya",
+      heading: "Estimasi",
+      enable_description: "Estimasi membantu Anda mengomunikasikan kompleksitas dan beban kerja tim.",
+      label: "Estimasi",
+      title: "Aktifkan estimasi untuk proyek saya",
       description: "Ini membantu Anda dalam mengkomunikasikan kompleksitas dan beban kerja tim.",
-      no_estimate: "Tidak ada perkiraan",
-      new: "Sistem perkiraan baru",
+      no_estimate: "Tidak ada estimasi",
+      new: "Sistem estimasi baru",
       create: {
         custom: "Kustom",
         start_from_scratch: "Mulai dari awal",
         choose_template: "Pilih template",
-        choose_estimate_system: "Pilih sistem perkiraan",
-        enter_estimate_point: "Masukkan perkiraan",
+        choose_estimate_system: "Pilih sistem estimasi",
+        enter_estimate_point: "Masukkan estimasi",
         step: "Langkah {step} dari {total}",
-        label: "Buat perkiraan",
+        label: "Buat estimasi",
       },
       toasts: {
         created: {
           success: {
-            title: "Perkiraan dibuat",
-            message: "Perkiraan telah berhasil dibuat",
+            title: "Estimasi dibuat",
+            message: "Estimasi telah berhasil dibuat",
           },
           error: {
-            title: "Pembuatan perkiraan gagal",
-            message: "Kami tidak dapat membuat perkiraan baru, silakan coba lagi.",
+            title: "Pembuatan estimasi gagal",
+            message: "Kami tidak dapat membuat estimasi baru, silakan coba lagi.",
           },
         },
         updated: {
           success: {
-            title: "Perkiraan dimodifikasi",
-            message: "Perkiraan telah diperbarui dalam proyek Anda.",
+            title: "Estimasi dimodifikasi",
+            message: "Estimasi telah diperbarui dalam proyek Anda.",
           },
           error: {
-            title: "Modifikasi perkiraan gagal",
-            message: "Kami tidak dapat memodifikasi perkiraan, silakan coba lagi",
+            title: "Modifikasi estimasi gagal",
+            message: "Kami tidak dapat memodifikasi estimasi, silakan coba lagi",
           },
         },
         enabled: {
           success: {
             title: "Berhasil!",
-            message: "Perkiraan telah diaktifkan.",
+            message: "Estimasi telah diaktifkan.",
           },
         },
         disabled: {
           success: {
             title: "Berhasil!",
-            message: "Perkiraan telah dinonaktifkan.",
+            message: "Estimasi telah dinonaktifkan.",
           },
           error: {
             title: "Kesalahan!",
-            message: "Perkiraan tidak dapat dinonaktifkan. Silakan coba lagi",
+            message: "Estimasi tidak dapat dinonaktifkan. Silakan coba lagi",
           },
         },
       },
       validation: {
-        min_length: "Perkiraan harus lebih besar dari 0.",
+        min_length: "Estimasi harus lebih besar dari 0.",
         unable_to_process: "Kami tidak dapat memproses permintaan Anda, silakan coba lagi.",
-        numeric: "Perkiraan harus berupa nilai numerik.",
-        character: "Perkiraan harus berupa nilai karakter.",
-        empty: "Nilai perkiraan tidak boleh kosong.",
-        already_exists: "Nilai perkiraan sudah ada.",
+        numeric: "Estimasi harus berupa nilai numerik.",
+        character: "Estimasi harus berupa nilai karakter.",
+        empty: "Nilai estimasi tidak boleh kosong.",
+        already_exists: "Nilai estimasi sudah ada.",
         unsaved_changes: "Anda memiliki beberapa perubahan yang belum disimpan, Harap simpan sebelum mengklik selesai",
         remove_empty:
-          "Perkiraan tidak boleh kosong. Masukkan nilai di setiap bidang atau hapus yang tidak memiliki nilai.",
+          "Estimasi tidak boleh kosong. Masukkan nilai di setiap bidang atau hapus yang tidak memiliki nilai.",
       },
       systems: {
         points: {
@@ -1965,6 +2012,9 @@ export default {
       },
     },
     automations: {
+      heading: "Otomatisasi",
+      description:
+        "Konfigurasikan tindakan otomatis untuk menyederhanakan alur kerja proyek dan mengurangi tugas manual.",
       label: "Otomatisasi",
       "auto-archive": {
         title: "Arsip otomatis item kerja yang ditutup",
@@ -1984,9 +2034,9 @@ export default {
         description: "Buat label untuk membantu mengatur dan memfilter item kerja dalam proyek Anda.",
       },
       estimates: {
-        title: "Belum ada sistem perkiraan",
-        description: "Buat serangkaian perkiraan untuk mengkomunikasikan jumlah pekerjaan per item kerja.",
-        primary_button: "Tambah sistem perkiraan",
+        title: "Belum ada sistem estimasi",
+        description: "Buat serangkaian estimasi untuk mengkomunikasikan jumlah pekerjaan per item kerja.",
+        primary_button: "Tambah sistem estimasi",
       },
     },
     features: {
@@ -2001,7 +2051,7 @@ export default {
       modules: {
         title: "Modul",
         short_title: "Modul",
-        description: "Atur pekerjaan menjadi sub-proyek dengan pemimpin dan penerima tugas khusus.",
+        description: "Atur pekerjaan ke dalam subproyek dengan pemimpin dan penanggung jawab khusus.",
         toggle_title: "Aktifkan modul",
         toggle_description: "Anggota proyek akan dapat membuat dan mengedit modul.",
       },
@@ -2020,11 +2070,11 @@ export default {
         toggle_description: "Anggota proyek akan dapat membuat dan mengedit halaman.",
       },
       intake: {
-        title: "Penerimaan",
-        short_title: "Penerimaan",
+        title: "Intake",
+        short_title: "Intake",
         description: "Biarkan non-anggota berbagi bug, umpan balik, dan saran; tanpa mengganggu alur kerja Anda.",
-        toggle_title: "Aktifkan penerimaan",
-        toggle_description: "Izinkan anggota proyek membuat permintaan penerimaan dalam aplikasi.",
+        toggle_title: "Aktifkan intake",
+        toggle_description: "Izinkan anggota proyek membuat permintaan intake dalam aplikasi.",
       },
     },
   },
@@ -2037,13 +2087,19 @@ export default {
     no_matching_cycles: "Tidak ada siklus yang cocok",
     remove_filters_to_see_all_cycles: "Hapus filter untuk melihat semua siklus",
     remove_search_criteria_to_see_all_cycles: "Hapus kriteria pencarian untuk melihat semua siklus",
-    only_completed_cycles_can_be_archived: "Hanya siklus yang diselesaikan yang dapat diarsipkan",
+    only_completed_cycles_can_be_archived: "Hanya siklus yang sudah selesai yang dapat diarsipkan",
+    start_date: "Tanggal mulai",
+    end_date: "Tanggal selesai",
+    in_your_timezone: "Dalam zona waktu Anda",
+    transfer_work_items: "Pindahkan {count} item kerja",
+    date_range: "Rentang tanggal",
+    add_date: "Tambah tanggal",
     active_cycle: {
       label: "Siklus aktif",
       progress: "Kemajuan",
       chart: "Grafik burndown",
       priority_issue: "Item kerja prioritas",
-      assignees: "Penugasan",
+      assignees: "Penanggung jawab",
       issue_burndown: "Burndown item kerja",
       ideal: "Ideal",
       current: "Sekarang",
@@ -2078,7 +2134,7 @@ export default {
         loading: "Menambahkan siklus ke favorit",
         success: {
           description: "Siklus ditambahkan ke favorit.",
-          title: "Sukses!",
+          title: "Berhasil!",
         },
         failed: {
           description: "Gagal menambahkan siklus ke favorit. Silakan coba lagi.",
@@ -2089,7 +2145,7 @@ export default {
         loading: "Menghapus siklus dari favorit",
         success: {
           description: "Siklus dihapus dari favorit.",
-          title: "Sukses!",
+          title: "Berhasil!",
         },
         failed: {
           description: "Gagal menghapus siklus dari favorit. Silakan coba lagi.",
@@ -2100,7 +2156,7 @@ export default {
         loading: "Memperbarui siklus",
         success: {
           description: "Siklus berhasil diperbarui.",
-          title: "Sukses!",
+          title: "Berhasil!",
         },
         failed: {
           description: "Kesalahan saat memperbarui siklus. Silakan coba lagi.",
@@ -2108,15 +2164,15 @@ export default {
         },
         error: {
           already_exists:
-            "Anda sudah memiliki siklus pada tanggal yang diberikan, jika Anda ingin membuat siklus draf, Anda dapat melakukannya dengan menghapus kedua tanggal tersebut.",
+            "Anda sudah memiliki siklus pada tanggal tersebut. Jika ingin membuat siklus draf, hapus kedua tanggalnya.",
         },
       },
     },
     empty_state: {
       general: {
-        title: "Kelompokkan dan bagi pekerjaan Anda dalam Siklus.",
+        title: "Kelompokkan pekerjaan dan atur batas waktunya dalam siklus.",
         description:
-          "Pecah pekerjaan menjadi bagian yang dibatasi waktu, kerjakan mundur dari tenggat waktu proyek Anda untuk menetapkan tanggal, dan buat kemajuan nyata sebagai tim.",
+          "Pecah pekerjaan menjadi bagian-bagian berbatas waktu. Tentukan tanggal dengan menghitung mundur dari tenggat proyek, lalu capai kemajuan nyata bersama tim.",
         primary_button: {
           text: "Tetapkan siklus pertama Anda",
           comic: {
@@ -2158,7 +2214,7 @@ export default {
       no_issues: {
         title: "Buat item kerja dan tugaskan kepada seseorang, bahkan kepada diri Anda sendiri",
         description:
-          "Anggap item kerja sebagai pekerjaan, tugas, atau JTBD. Yang kami suka. Item kerja dan sub-item kerjanya biasanya merupakan tindakan berbasis waktu yang ditugaskan kepada anggota tim Anda. Tim Anda membuat, menetapkan, dan menyelesaikan item kerja untuk memindahkan proyek Anda menuju tujuannya.",
+          "Anggap item kerja sebagai pekerjaan, tugas, atau JTBD—istilah yang kami sukai. Item kerja dan sub-itemnya biasanya merupakan tindakan berbatas waktu yang ditugaskan kepada anggota tim. Tim Anda membuat, menugaskan, dan menyelesaikan item kerja untuk mencapai tujuan proyek.",
         primary_button: {
           text: "Buat item kerja pertama Anda",
           comic: {
@@ -2177,7 +2233,7 @@ export default {
         },
       },
       issues_empty_filter: {
-        title: "Tidak ada item kerja ditemukan yang cocok dengan filter yang diterapkan",
+        title: "Tidak ditemukan item kerja yang cocok dengan filter yang diterapkan",
         secondary_button: {
           text: "Bersihkan semua filter",
         },
@@ -2193,9 +2249,9 @@ export default {
     delete_module: "Hapus modul",
     empty_state: {
       general: {
-        title: "Peta tonggak proyek Anda ke Modul dan lacak pekerjaan terakumulasi dengan mudah.",
+        title: "Petakan tonggak proyek ke modul dan lacak total pekerjaan dengan lebih mudah.",
         description:
-          "Sekelompok item kerja yang tergolong dalam induk yang logis dan hierarkis membentuk satu modul. Anggap saja mereka sebagai cara untuk melacak pekerjaan berdasarkan tonggak proyek. Mereka memiliki periode dan tenggat waktu sendiri serta analitik untuk membantu Anda melihat seberapa dekat atau jauh Anda dari tonggak tersebut.",
+          "Modul adalah sekumpulan item kerja yang berada di bawah satu induk dengan struktur yang jelas. Gunakan modul untuk melacak pekerjaan berdasarkan tonggak proyek, lengkap dengan periode, tenggat waktu, dan analitiknya.",
         primary_button: {
           text: "Buat modul pertama Anda",
           comic: {
@@ -2271,7 +2327,7 @@ export default {
         title:
           "Tulis catatan, dokumen, atau seluruh basis pengetahuan. Dapatkan Galileo, asisten AI Pranala, untuk membantu Anda memulai",
         description:
-          "Halaman adalah ruang pemikiran di Pranala. Catat notul rapat, format dengan mudah, sertakan item kerja, tata letak menggunakan perpustakaan komponen, dan simpan semua di dalam konteks proyek Anda. Untuk menyelesaikan dokumen dengan cepat, panggil Galileo, AI Pranala, dengan pintasan atau dengan mengklik tombol.",
+          "Halaman adalah ruang untuk menuangkan ide di Pranala. Tulis notulen rapat, format dengan mudah, sematkan item kerja, susun dengan komponen siap pakai, dan simpan semuanya dalam konteks proyek Anda. Untuk menyelesaikan dokumen lebih cepat, panggil Galileo, asisten AI Pranala, lewat pintasan atau tombol.",
         primary_button: {
           text: "Buat halaman pertama Anda",
         },
@@ -2279,7 +2335,7 @@ export default {
       private: {
         title: "Belum ada halaman pribadi",
         description:
-          "Simpan pemikiran pribadi Anda di sini. Ketika Anda sudah siap untuk berbagi, tim hanya seklik jarak.",
+          "Simpan pemikiran pribadi Anda di sini. Saat siap berbagi, tim Anda dapat mengaksesnya dengan satu klik.",
         primary_button: {
           text: "Buat halaman pertama Anda",
         },
@@ -2293,24 +2349,24 @@ export default {
       },
       archived: {
         title: "Belum ada halaman yang diarsipkan",
-        description: "Arsipkan halaman yang tidak ada dalam radar Anda. Akses di sini saat diperlukan.",
+        description: "Arsipkan halaman yang sedang tidak Anda pantau. Akses kembali di sini saat diperlukan.",
       },
     },
   },
   command_k: {
     empty_state: {
       search: {
-        title: "Tidak ada hasil ditemukan",
+        title: "Tidak ditemukan hasil",
       },
     },
   },
   issue_relation: {
     empty_state: {
       search: {
-        title: "Tidak ada item kerja yang cocok ditemukan",
+        title: "Tidak ditemukan item kerja yang cocok",
       },
       no_issues: {
-        title: "Tidak ada item kerja ditemukan",
+        title: "Tidak ditemukan item kerja",
       },
     },
   },
@@ -2318,19 +2374,19 @@ export default {
     empty_state: {
       general: {
         title: "Belum ada komentar",
-        description: "Komentar dapat digunakan sebagai ruang diskusi dan tindak lanjut untuk item kerja",
+        description: "Komentar dapat digunakan sebagai ruang diskusi dan tindak lanjut untuk item kerja.",
       },
     },
   },
   notification: {
-    label: "Kotak Masuk",
-    page_label: "{workspace} - Kotak Masuk",
+    label: "Inbox",
+    page_label: "{workspace} - Inbox",
     options: {
       mark_all_as_read: "Tandai semua sebagai dibaca",
       mark_read: "Tandai sebagai dibaca",
       mark_unread: "Tandai sebagai tidak dibaca",
-      refresh: "Segarkan",
-      filters: "Filter Kotak Masuk",
+      refresh: "Muat ulang",
+      filters: "Filter Inbox",
       show_unread: "Tampilkan yang belum dibaca",
       show_snoozed: "Tampilkan yang ditunda",
       show_archived: "Tampilkan yang diarsipkan",
@@ -2343,9 +2399,9 @@ export default {
       read: "Notifikasi ditandai sebagai dibaca",
       unread: "Notifikasi ditandai sebagai tidak dibaca",
       archived: "Notifikasi ditandai sebagai diarsipkan",
-      unarchived: "Notifikasi ditandai sebagai dihapus arsip",
+      unarchived: "Notifikasi tidak lagi diarsipkan",
       snoozed: "Notifikasi ditunda",
-      unsnoozed: "Notifikasi dihapus tunda",
+      unsnoozed: "Penundaan notifikasi dibatalkan",
     },
     empty_state: {
       detail: {
@@ -2353,21 +2409,21 @@ export default {
       },
       all: {
         title: "Tidak ada item kerja yang ditugaskan",
-        description: "Pembaruan untuk item kerja yang ditugaskan kepada Anda dapat dilihat di sini",
+        description: "Pembaruan untuk item kerja yang ditugaskan kepada Anda akan muncul di sini.",
       },
       mentions: {
         title: "Tidak ada item kerja yang ditugaskan",
-        description: "Pembaruan untuk item kerja yang ditugaskan kepada Anda dapat dilihat di sini",
+        description: "Pembaruan untuk item kerja yang ditugaskan kepada Anda akan muncul di sini.",
       },
     },
     tabs: {
       all: "Semua",
-      mentions: "Sebut",
+      mentions: "Mention",
     },
     filter: {
       assigned: "Ditugaskan untuk saya",
       created: "Dibuat oleh saya",
-      subscribed: "Disubscribe oleh saya",
+      subscribed: "Yang saya ikuti",
     },
     snooze: {
       "1_day": "1 hari",
@@ -2387,10 +2443,10 @@ export default {
         title: "Tambahkan item kerja ke siklus untuk melihat grafik burndown.",
       },
       priority_issue: {
-        title: "Amati item kerja prioritas yang ditangani dalam siklus pada pandangan pertama.",
+        title: "Lihat item kerja prioritas dalam siklus secara sekilas.",
       },
       assignee: {
-        title: "Tambahkan penugasan ke item kerja untuk melihat pembagian kerja berdasarkan penugasan.",
+        title: "Tambahkan penanggung jawab ke item kerja untuk melihat pembagian kerja berdasarkan penanggung jawab.",
       },
       label: {
         title: "Tambahkan label ke item kerja untuk melihat pembagian kerja berdasarkan label.",
@@ -2402,7 +2458,7 @@ export default {
       inbox: {
         title: "Intake tidak diaktifkan untuk proyek ini.",
         description:
-          "Intake membantu Anda mengelola permintaan yang masuk ke proyek Anda dan menambahkannya sebagai item kerja dalam alur kerja Anda. Aktifkan intake dari pengaturan proyek untuk mengelola permintaan.",
+          "Intake membantu Anda mengelola permintaan yang masuk ke proyek Anda dan menambahkannya sebagai item kerja dalam alur kerja Anda. Aktifkan Intake dari pengaturan proyek untuk mengelola permintaan.",
         primary_button: {
           text: "Kelola fitur",
         },
@@ -2410,7 +2466,7 @@ export default {
       cycle: {
         title: "Siklus tidak diaktifkan untuk proyek ini.",
         description:
-          "Pecah pekerjaan menjadi bagian yang dibatasi waktu, kerjakan mundur dari tenggat waktu proyek Anda untuk menetapkan tanggal, dan buat kemajuan nyata sebagai tim. Aktifkan fitur siklus untuk proyek Anda agar dapat mulai menggunakannya.",
+          "Pecah pekerjaan menjadi bagian-bagian berbatas waktu. Tentukan tanggal dengan menghitung mundur dari tenggat proyek, lalu capai kemajuan nyata bersama tim. Aktifkan fitur siklus untuk proyek Anda agar dapat mulai menggunakannya.",
         primary_button: {
           text: "Kelola fitur",
         },
@@ -2418,7 +2474,7 @@ export default {
       module: {
         title: "Modul tidak diaktifkan untuk proyek ini.",
         description:
-          "Modul adalah blok bangunan dari proyek Anda. Aktifkan modul dari pengaturan proyek untuk mulai menggunakannya.",
+          "Modul adalah bagian penting dari proyek Anda. Aktifkan modul dari pengaturan proyek untuk mulai menggunakannya.",
         primary_button: {
           text: "Kelola fitur",
         },
@@ -2426,7 +2482,7 @@ export default {
       page: {
         title: "Halaman tidak diaktifkan untuk proyek ini.",
         description:
-          "Halaman adalah blok bangunan dari proyek Anda. Aktifkan halaman dari pengaturan proyek untuk mulai menggunakannya.",
+          "Halaman adalah bagian penting dari proyek Anda. Aktifkan halaman dari pengaturan proyek untuk mulai menggunakannya.",
         primary_button: {
           text: "Kelola fitur",
         },
@@ -2434,7 +2490,7 @@ export default {
       view: {
         title: "Tampilan tidak diaktifkan untuk proyek ini.",
         description:
-          "Tampilan adalah blok bangunan dari proyek Anda. Aktifkan tampilan dari pengaturan proyek untuk mulai menggunakannya.",
+          "Tampilan membantu Anda mengatur pekerjaan dalam proyek. Aktifkan tampilan dari pengaturan proyek untuk mulai menggunakannya.",
         primary_button: {
           text: "Kelola fitur",
         },
@@ -2444,9 +2500,9 @@ export default {
   workspace_draft_issues: {
     draft_an_issue: "Draf item kerja",
     empty_state: {
-      title: "Item kerja setengah jadi, dan segera, komentar akan muncul di sini.",
+      title: "Draf item kerja dan, nantinya, komentar akan muncul di sini.",
       description:
-        "Untuk mencoba ini, mulai dengan menambahkan item kerja dan tinggalkan di tengah jalan atau buat draf pertama Anda di bawah ini. 😉",
+        "Untuk mencobanya, tambahkan item kerja lalu biarkan setengah jadi, atau buat draf pertama Anda di bawah ini. 😉",
       primary_button: {
         text: "Buat draf pertama Anda",
       },
@@ -2469,26 +2525,24 @@ export default {
     title: "Catatan tempel Anda",
     placeholder: "klik untuk mengetik di sini",
     all: "Semua catatan tempel",
-    "no-data":
-      "Tuliskan sebuah ide, tangkap momen aha, atau catat pemikiran brilian. Tambahkan catatan tempel untuk memulai.",
+    "no-data": "Catat ide, momen aha, atau pemikiran brilian. Tambahkan catatan tempel untuk memulai.",
     add: "Tambah catatan tempel",
     search_placeholder: "Cari berdasarkan judul",
     delete: "Hapus catatan tempel",
     delete_confirmation: "Apakah Anda yakin ingin menghapus catatan tempel ini?",
     empty_state: {
-      simple:
-        "Tuliskan sebuah ide, tangkap momen aha, atau catat pemikiran brilian. Tambahkan catatan tempel untuk memulai.",
+      simple: "Catat ide, momen aha, atau pemikiran brilian. Tambahkan catatan tempel untuk memulai.",
       general: {
-        title: "Catatan tempel adalah catatan cepat dan tugas yang Anda buat secara langsung.",
+        title: "Catatan tempel adalah catatan singkat dan to-do yang bisa Anda buat kapan saja.",
         description:
-          "Tangkap pemikiran dan ide Anda dengan mudah dengan membuat catatan tempel yang dapat Anda akses kapan saja dan dari mana saja.",
+          "Catat ide dan pemikiran Anda dalam catatan tempel yang dapat diakses kapan saja dan dari mana saja.",
         primary_button: {
           text: "Tambah catatan tempel",
         },
       },
       search: {
-        title: "Itu tidak cocok dengan salah satu catatan tempel Anda.",
-        description: "Coba istilah yang berbeda atau beri tahu kami\njika Anda yakin pencarian Anda benar. ",
+        title: "Tidak ada catatan tempel yang cocok.",
+        description: "Coba istilah lain. Jika yakin pencarian Anda benar, beri tahu kami. ",
         primary_button: {
           text: "Tambah catatan tempel",
         },
@@ -2497,7 +2551,7 @@ export default {
     toasts: {
       errors: {
         wrong_name: "Nama catatan tempel tidak boleh lebih dari 100 karakter.",
-        already_exists: "Sudah ada catatan tempel dengan tidak ada deskripsi",
+        already_exists: "Sudah ada catatan tempel tanpa deskripsi.",
       },
       created: {
         title: "Catatan tempel berhasil dibuat",
@@ -2532,12 +2586,11 @@ export default {
     },
     member: {
       title: "Anggota",
-      description:
-        "Kemampuan untuk membaca, menulis, mengedit, dan menghapus entitas di dalam proyek, siklus, dan modul",
+      description: "Dapat membaca, menulis, mengedit, dan menghapus data di dalam proyek, siklus, dan modul.",
     },
     admin: {
       title: "Admin",
-      description: "Semua izin diatur ke true dalam ruang kerja.",
+      description: "Semua izin di workspace ini diaktifkan.",
     },
   },
   user_roles: {
@@ -2554,7 +2607,7 @@ export default {
   },
   importer: {
     github: {
-      title: "Github",
+      title: "GitHub",
       description: "Impor item kerja dari repositori GitHub dan sinkronkan.",
     },
     jira: {
@@ -2566,29 +2619,29 @@ export default {
     csv: {
       title: "CSV",
       description: "Ekspor item kerja ke file CSV.",
-      short_description: "Ekspor sebagai csv",
+      short_description: "Ekspor sebagai CSV",
     },
     excel: {
       title: "Excel",
       description: "Ekspor item kerja ke file Excel.",
-      short_description: "Ekspor sebagai excel",
+      short_description: "Ekspor sebagai Excel",
     },
     xlsx: {
       title: "Excel",
       description: "Ekspor item kerja ke file Excel.",
-      short_description: "Ekspor sebagai excel",
+      short_description: "Ekspor sebagai Excel",
     },
     json: {
       title: "JSON",
       description: "Ekspor item kerja ke file JSON.",
-      short_description: "Ekspor sebagai json",
+      short_description: "Ekspor sebagai JSON",
     },
   },
   default_global_view: {
     all_issues: "Semua item kerja",
     assigned: "Ditugaskan",
     created: "Dibuat",
-    subscribed: "Disubscribe",
+    subscribed: "Diikuti",
   },
   themes: {
     theme_options: {
@@ -2596,13 +2649,13 @@ export default {
         label: "Preferensi sistem",
       },
       light: {
-        label: "Cerah",
+        label: "Terang",
       },
       dark: {
         label: "Gelap",
       },
       light_contrast: {
-        label: "Cerah kontras tinggi",
+        label: "Terang dengan kontras tinggi",
       },
       dark_contrast: {
         label: "Gelap kontras tinggi",
@@ -2611,6 +2664,13 @@ export default {
         label: "Tema kustom",
       },
     },
+  },
+  project_members: {
+    full_name: "Nama lengkap",
+    display_name: "Nama tampilan",
+    email: "Email",
+    joining_date: "Tanggal bergabung",
+    role: "Peran",
   },
   project_modules: {
     status: {
@@ -2646,13 +2706,13 @@ export default {
   description_versions: {
     last_edited_by: "Terakhir disunting oleh",
     previously_edited_by: "Sebelumnya disunting oleh",
-    edited_by: "Disunting oleh",
+    edited_by: "Diedit oleh",
   },
   self_hosted_maintenance_message: {
     plane_didnt_start_up_this_could_be_because_one_or_more_plane_services_failed_to_start:
       "Pranala tidak berhasil dimulai. Ini bisa karena satu atau lebih layanan Pranala gagal untuk dimulai.",
     choose_view_logs_from_setup_sh_and_docker_logs_to_be_sure:
-      "Pilih View Logs dari setup.sh dan log Docker untuk memastikan.",
+      "Pilih Lihat log di setup.sh dan periksa log Docker untuk memastikan.",
   },
   no_of: "Jumlah {entity}",
   page_navigation_pane: {
@@ -2673,7 +2733,7 @@ export default {
           read_time: "Waktu baca",
         },
         actors_info: {
-          edited_by: "Disunting oleh",
+          edited_by: "Diedit oleh",
           created_by: "Dibuat oleh",
         },
         version_history: {
@@ -2694,4 +2754,195 @@ export default {
     close_button: "Tutup panel navigasi",
     outline_floating_button: "Buka garis besar",
   },
+  power_k: {
+    contextual_actions: {
+      work_item: {
+        title: "Tindakan item kerja",
+        indicator: "Item kerja",
+        change_state: "Ubah status",
+        change_priority: "Ubah prioritas",
+        change_assignees: "Tetapkan penanggung jawab",
+        assign_to_me: "Tetapkan ke saya",
+        unassign_from_me: "Hapus penugasan saya",
+        change_estimate: "Ubah estimasi",
+        add_to_cycle: "Tambahkan ke siklus",
+        add_to_modules: "Tambahkan ke modul",
+        add_labels: "Tambahkan label",
+        subscribe: "Ikuti notifikasi",
+        unsubscribe: "Berhenti mengikuti notifikasi",
+        delete: "Hapus",
+        copy_id: "Salin ID",
+        copy_id_toast_success: "ID item kerja disalin ke clipboard.",
+        copy_id_toast_error: "Terjadi kesalahan saat menyalin ID item kerja ke clipboard.",
+        copy_title: "Salin judul",
+        copy_title_toast_success: "Judul item kerja disalin ke clipboard.",
+        copy_title_toast_error: "Terjadi kesalahan saat menyalin judul item kerja ke clipboard.",
+        copy_url: "Salin URL",
+        copy_url_toast_success: "URL item kerja disalin ke clipboard.",
+        copy_url_toast_error: "Terjadi kesalahan saat menyalin URL item kerja ke clipboard.",
+      },
+      cycle: {
+        title: "Tindakan siklus",
+        indicator: "Siklus",
+        add_to_favorites: "Tambahkan ke favorit",
+        remove_from_favorites: "Hapus dari favorit",
+        copy_url: "Salin URL",
+        copy_url_toast_success: "URL siklus disalin ke clipboard.",
+        copy_url_toast_error: "Terjadi kesalahan saat menyalin URL siklus ke clipboard.",
+      },
+      module: {
+        title: "Tindakan modul",
+        indicator: "Modul",
+        add_remove_members: "Tambah/hapus anggota",
+        change_status: "Ubah status",
+        add_to_favorites: "Tambahkan ke favorit",
+        remove_from_favorites: "Hapus dari favorit",
+        copy_url: "Salin URL",
+        copy_url_toast_success: "URL modul disalin ke clipboard.",
+        copy_url_toast_error: "Terjadi kesalahan saat menyalin URL modul ke clipboard.",
+      },
+      page: {
+        title: "Tindakan halaman",
+        indicator: "Halaman",
+        lock: "Kunci",
+        unlock: "Buka kunci",
+        make_private: "Jadikan pribadi",
+        make_public: "Jadikan publik",
+        archive: "Arsipkan",
+        restore: "Pulihkan",
+        add_to_favorites: "Tambahkan ke favorit",
+        remove_from_favorites: "Hapus dari favorit",
+        copy_url: "Salin URL",
+        copy_url_toast_success: "URL halaman disalin ke clipboard.",
+        copy_url_toast_error: "Terjadi kesalahan saat menyalin URL halaman ke clipboard.",
+      },
+    },
+    creation_actions: {
+      create_work_item: "Item kerja baru",
+      create_page: "Halaman baru",
+      create_view: "Tampilan baru",
+      create_cycle: "Siklus baru",
+      create_module: "Modul baru",
+      create_project: "Proyek baru",
+      create_workspace: "Workspace baru",
+    },
+    navigation_actions: {
+      open_workspace: "Buka workspace",
+      nav_home: "Buka beranda",
+      nav_inbox: "Buka Inbox",
+      nav_your_work: "Buka pekerjaan Anda",
+      nav_account_settings: "Buka pengaturan akun",
+      open_project: "Buka proyek",
+      nav_projects_list: "Buka daftar proyek",
+      nav_all_workspace_work_items: "Buka semua item kerja",
+      nav_assigned_workspace_work_items: "Buka item kerja yang ditugaskan",
+      nav_created_workspace_work_items: "Buka item kerja yang dibuat",
+      nav_subscribed_workspace_work_items: "Buka item kerja yang diikuti",
+      nav_workspace_analytics: "Buka analitik workspace",
+      nav_workspace_drafts: "Buka draf workspace",
+      nav_workspace_archives: "Buka arsip workspace",
+      open_workspace_setting: "Buka pengaturan workspace",
+      nav_workspace_settings: "Buka pengaturan workspace",
+      nav_project_work_items: "Buka item kerja",
+      open_project_cycle: "Buka siklus",
+      nav_project_cycles: "Buka siklus",
+      open_project_module: "Buka modul",
+      nav_project_modules: "Buka modul",
+      open_project_view: "Buka tampilan proyek",
+      nav_project_views: "Buka tampilan proyek",
+      nav_project_pages: "Buka halaman",
+      nav_project_intake: "Buka Intake",
+      nav_project_archives: "Buka arsip proyek",
+      open_project_setting: "Buka pengaturan proyek",
+      nav_project_settings: "Buka pengaturan proyek",
+    },
+    account_actions: {
+      sign_out: "Keluar",
+      workspace_invites: "Undangan workspace",
+    },
+    miscellaneous_actions: {
+      toggle_app_sidebar: "Tampilkan/sembunyikan sidebar aplikasi",
+      copy_current_page_url: "Salin URL halaman saat ini",
+      copy_current_page_url_toast_success: "URL halaman saat ini disalin ke clipboard.",
+      copy_current_page_url_toast_error: "Terjadi kesalahan saat menyalin URL halaman saat ini ke clipboard.",
+      focus_top_nav_search: "Fokuskan kolom pencarian",
+    },
+    preferences_actions: {
+      update_theme: "Ubah tema antarmuka",
+      update_timezone: "Ubah zona waktu",
+      update_start_of_week: "Ubah hari pertama dalam minggu",
+      update_language: "Ubah bahasa antarmuka",
+      toast: {
+        theme: {
+          success: "Tema berhasil diperbarui.",
+          error: "Gagal memperbarui tema. Silakan coba lagi.",
+        },
+        timezone: {
+          success: "Zona waktu berhasil diperbarui.",
+          error: "Gagal memperbarui zona waktu. Silakan coba lagi.",
+        },
+        generic: {
+          success: "Preferensi berhasil diperbarui.",
+          error: "Gagal memperbarui preferensi. Silakan coba lagi.",
+        },
+      },
+    },
+    help_actions: {
+      open_keyboard_shortcuts: "Buka pintasan keyboard",
+      open_plane_documentation: "Buka dokumentasi Pranala",
+      join_forum: "Bergabung dengan forum kami",
+      report_bug: "Laporkan bug",
+      chat_with_us: "Chat dengan kami",
+    },
+    page_placeholders: {
+      default: "Ketik perintah atau cari",
+      open_workspace: "Buka workspace",
+      open_project: "Buka proyek",
+      open_workspace_setting: "Buka pengaturan workspace",
+      open_project_cycle: "Buka siklus",
+      open_project_module: "Buka modul",
+      open_project_view: "Buka tampilan proyek",
+      open_project_setting: "Buka pengaturan proyek",
+      update_work_item_state: "Ubah status",
+      update_work_item_priority: "Ubah prioritas",
+      update_work_item_assignee: "Tetapkan penanggung jawab",
+      update_work_item_estimate: "Ubah estimasi",
+      update_work_item_cycle: "Tambahkan ke siklus",
+      update_work_item_module: "Tambahkan ke modul",
+      update_work_item_labels: "Tambahkan label",
+      update_module_member: "Ubah anggota",
+      update_module_status: "Ubah status",
+      update_theme: "Ubah tema",
+      update_timezone: "Ubah zona waktu",
+      update_start_of_week: "Ubah hari pertama dalam minggu",
+      update_language: "Ubah bahasa",
+    },
+    search_menu: {
+      no_results: "Tidak ditemukan hasil",
+      clear_search: "Hapus pencarian",
+    },
+    footer: {
+      workspace_level: "Tingkat workspace",
+    },
+    group_titles: {
+      contextual: "Konteks",
+      navigation: "Navigasi",
+      create: "Buat",
+      general: "Umum",
+      settings: "Pengaturan",
+      account: "Akun",
+      miscellaneous: "Lainnya",
+      preferences: "Preferensi",
+      help: "Bantuan",
+    },
+  },
+  // Kustomisasi navigasi
+  customize_navigation: "Kustomisasi navigasi",
+  personal: "Pribadi",
+  accordion_navigation_control: "Navigasi sidebar akordeon",
+  horizontal_navigation_bar: "Navigasi bertab",
+  show_limited_projects_on_sidebar: "Tampilkan jumlah proyek terbatas di sidebar",
+  enter_number_of_projects: "Masukkan jumlah proyek",
+  pin: "Sematkan",
+  unpin: "Lepas sematan",
 } as const;

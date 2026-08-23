@@ -6,7 +6,8 @@
 
 import type { IPaymentProduct, TBillingFrequency, TProductBillingFrequency } from "@plane/types";
 import { EProductSubscriptionEnum } from "@plane/types";
-import { PRODUCT_NAME } from "./brand";
+import { PRODUCT_NAME, SOURCE_ISSUES_URL } from "./brand";
+import { MARKETING_CONTACT_US_PAGE_LINK, MARKETING_PRICING_PAGE_LINK, WEBSITE_URL } from "./endpoints";
 
 /**
  * Default billing frequency for each product subscription type
@@ -115,9 +116,11 @@ export const PLANE_COMMUNITY_PRODUCTS: Record<string, IPaymentProduct> = {
 };
 
 /**
- * URL for the "Talk to Sales" page where users can contact sales team
+ * URL for the configured Pranala contact/support destination.
+ * Falls back to the source issue chooser until a public marketing URL is configured.
  */
-export const TALK_TO_SALES_URL = "https://plane.so/talk-to-sales";
+export const TALK_TO_SALES_URL =
+  MARKETING_CONTACT_US_PAGE_LINK || MARKETING_PRICING_PAGE_LINK || WEBSITE_URL || SOURCE_ISSUES_URL;
 
 /**
  * Mapping of subscription types to their respective upgrade/redirection URLs based on billing frequency
@@ -133,12 +136,12 @@ export const SUBSCRIPTION_REDIRECTION_URLS: Record<EProductSubscriptionEnum, Rec
     year: TALK_TO_SALES_URL,
   },
   [EProductSubscriptionEnum.PRO]: {
-    month: "https://app.plane.so/upgrade/pro/self-hosted?plan=month",
-    year: "https://app.plane.so/upgrade/pro/self-hosted?plan=year",
+    month: TALK_TO_SALES_URL,
+    year: TALK_TO_SALES_URL,
   },
   [EProductSubscriptionEnum.BUSINESS]: {
-    month: "https://app.plane.so/upgrade/business/self-hosted?plan=month",
-    year: "https://app.plane.so/upgrade/business/self-hosted?plan=year",
+    month: TALK_TO_SALES_URL,
+    year: TALK_TO_SALES_URL,
   },
   [EProductSubscriptionEnum.ENTERPRISE]: {
     month: TALK_TO_SALES_URL,
@@ -153,7 +156,7 @@ export const SUBSCRIPTION_REDIRECTION_URLS: Record<EProductSubscriptionEnum, Rec
 export const SUBSCRIPTION_WEBPAGE_URLS: Record<EProductSubscriptionEnum, string> = {
   [EProductSubscriptionEnum.FREE]: TALK_TO_SALES_URL,
   [EProductSubscriptionEnum.ONE]: TALK_TO_SALES_URL,
-  [EProductSubscriptionEnum.PRO]: "https://plane.so/pro",
-  [EProductSubscriptionEnum.BUSINESS]: "https://plane.so/business",
-  [EProductSubscriptionEnum.ENTERPRISE]: "https://plane.so/business",
+  [EProductSubscriptionEnum.PRO]: TALK_TO_SALES_URL,
+  [EProductSubscriptionEnum.BUSINESS]: TALK_TO_SALES_URL,
+  [EProductSubscriptionEnum.ENTERPRISE]: TALK_TO_SALES_URL,
 };

@@ -6,7 +6,6 @@
 
 import Link from "next/link";
 import { Button } from "@plane/propel/button";
-import { PlaneLogo } from "@plane/propel/icons";
 
 export function InstanceNotReady() {
   return (
@@ -14,7 +13,7 @@ export function InstanceNotReady() {
       <div className="relative w-auto max-w-2xl space-y-8 py-10">
         <div className="relative flex flex-col items-center justify-center space-y-4">
           <h1 className="pb-3 text-24 font-bold">Welcome to Pranala</h1>
-          <PlaneLogo className="h-24 w-40 text-accent-primary" aria-label="Pranala" />
+          <img src="/pranala-mark.svg" alt="Pranala" className="h-24 w-40 object-contain" />
           <p className="text-14 font-medium text-placeholder">Get started by setting up your instance and workspace</p>
         </div>
 

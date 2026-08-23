@@ -4,12 +4,15 @@
  * See the LICENSE file for details.
  */
 
-import { PlaneLogo } from "@plane/propel/icons";
-
 export function LogoSpinner() {
   return (
     <div className="flex items-center justify-center">
-      <PlaneLogo className="h-6 w-auto animate-pulse text-accent-primary sm:h-11" />
+      <img
+        src="/pranala-mark.svg"
+        alt=""
+        aria-hidden="true"
+        className="size-6 animate-pulse object-contain sm:size-11"
+      />
     </div>
   );
 }

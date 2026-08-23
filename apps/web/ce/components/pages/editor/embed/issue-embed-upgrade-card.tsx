@@ -22,18 +22,9 @@ export function IssueEmbedUpgradeCard(props: any) {
     >
       <div className="flex items-center gap-4">
         <ProIcon className="size-4 flex-shrink-0" />
-        <p className="!text-14 text-secondary">
-          Embed and access issues in pages seamlessly, upgrade to Plane Pro now.
-        </p>
+        <p className="!text-14 text-secondary">Embed and access issues in Pages with Pranala Work Pro capabilities.</p>
       </div>
-      <a
-        href="https://plane.so/pro"
-        target="_blank"
-        rel="noopener noreferrer"
-        className={cn(getButtonStyling("primary", "base"), "no-underline")}
-      >
-        Upgrade
-      </a>
+      <span className={cn(getButtonStyling("secondary", "base"), "cursor-not-allowed opacity-60")}>Contact admin</span>
     </div>
   );
 }

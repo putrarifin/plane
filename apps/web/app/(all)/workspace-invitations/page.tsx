@@ -9,6 +9,7 @@ import { useSearchParams } from "next/navigation";
 import useSWR from "swr";
 import { Boxes, Share2, Star, User2 } from "lucide-react";
 import { CheckIcon, CloseIcon } from "@plane/propel/icons";
+import { SOURCE_ISSUES_URL, SOURCE_REPOSITORY_URL } from "@plane/constants";
 // components
 import { LogoSpinner } from "@/components/common/logo-spinner";
 import { EmptySpace, EmptySpaceItem } from "@/components/ui/empty-space";
@@ -86,7 +87,7 @@ function WorkspaceInvitationPage() {
           ) : (
             <EmptySpace
               title={`You have been invited to ${invitationDetail.workspace.name}`}
-              description="Your workspace is where you'll create projects, collaborate on your work items, and organize different streams of work in your Plane account."
+              description="Your workspace is where you'll create projects, collaborate on your work items, and organize different streams of work in your Pranala account."
             >
               <EmptySpaceItem Icon={CheckIcon} title="Accept" action={handleAccept} />
               <EmptySpaceItem Icon={CloseIcon} title="Ignore" action={handleReject} />
@@ -96,14 +97,14 @@ function WorkspaceInvitationPage() {
           invitationDetail?.accepted ? (
             <EmptySpace
               title={`You are already a member of ${invitationDetail.workspace.name}`}
-              description="Your workspace is where you'll create projects, collaborate on your work items, and organize different streams of work in your Plane account."
+              description="Your workspace is where you'll create projects, collaborate on your work items, and organize different streams of work in your Pranala account."
             >
               <EmptySpaceItem Icon={Boxes} title="Continue to home" href="/" />
             </EmptySpace>
           ) : (
             <EmptySpace
               title="This invitation link is not active anymore."
-              description="Your workspace is where you'll create projects, collaborate on your work items, and organize different streams of work in your Plane account."
+              description="Your workspace is where you'll create projects, collaborate on your work items, and organize different streams of work in your Pranala account."
               link={{ text: "Or start from an empty project", href: "/" }}
             >
               {!currentUser ? (
@@ -111,12 +112,8 @@ function WorkspaceInvitationPage() {
               ) : (
                 <EmptySpaceItem Icon={Boxes} title="Continue to home" href="/" />
               )}
-              <EmptySpaceItem Icon={Star} title="Star us on GitHub" href="https://github.com/makeplane" />
-              <EmptySpaceItem
-                Icon={Share2}
-                title="Join our community of active creators"
-                href="https://forum.plane.so"
-              />
+              <EmptySpaceItem Icon={Star} title="View Pranala source" href={SOURCE_REPOSITORY_URL} />
+              <EmptySpaceItem Icon={Share2} title="Report an issue" href={SOURCE_ISSUES_URL} />
             </EmptySpace>
           )
         ) : (

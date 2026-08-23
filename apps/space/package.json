@@ -2,6 +2,7 @@
   "name": "space",
   "version": "1.3.0",
   "private": true,
+  "description": "Published workspace UI for Pranala Work",
   "license": "AGPL-3.0",
   "type": "module",
   "scripts": {

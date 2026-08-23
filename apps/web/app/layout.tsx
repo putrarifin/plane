@@ -9,23 +9,23 @@ import Script from "next/script";
 // styles
 import "@/styles/globals.css";
 
-import { SITE_DESCRIPTION, SITE_NAME } from "@plane/constants";
+import {
+  PRODUCT_FORMAL_NAME,
+  PRODUCT_NAME,
+  PRODUCT_TAGLINE,
+  SITE_DESCRIPTION,
+  SITE_NAME,
+  SITE_URL,
+} from "@plane/constants";
 
 // helpers
 import { cn } from "@plane/utils";
-
-// assets
-import favicon16 from "@/app/assets/favicon/favicon-16x16.png?url";
-import favicon32 from "@/app/assets/favicon/favicon-32x32.png?url";
-import faviconIco from "@/app/assets/favicon/favicon.ico?url";
-import icon180 from "@/app/assets/icons/icon-180x180.png?url";
-import icon512 from "@/app/assets/icons/icon-512x512.png?url";
 
 // local
 import { AppProvider } from "./provider";
 
 export const meta = () => [
-  { title: "Plane | Simple, extensible, open-source project management tool." },
+  { title: `${PRODUCT_FORMAL_NAME} | ${PRODUCT_TAGLINE}` },
   { name: "description", content: SITE_DESCRIPTION },
   {
     name: "keywords",
@@ -37,22 +37,21 @@ export const meta = () => [
     content:
       "width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover",
   },
-  { property: "og:title", content: "Plane | Simple, extensible, open-source project management tool." },
+  { property: "og:title", content: `${PRODUCT_FORMAL_NAME} | ${PRODUCT_TAGLINE}` },
   {
     property: "og:description",
-    content: "Open-source project management tool to manage work items, cycles, and product roadmaps easily",
+    content: SITE_DESCRIPTION,
   },
-  { property: "og:url", content: "https://app.plane.so/" },
-  { property: "og:image", content: "https://app.plane.so/og-image.png" },
+  { property: "og:url", content: SITE_URL },
+  { property: "og:image", content: "/pranala-mark.svg" },
   { property: "og:image:width", content: "1200" },
   { property: "og:image:height", content: "630" },
-  { property: "og:image:alt", content: "Plane - Modern project management" },
-  { name: "twitter:site", content: "@planepowers" },
+  { property: "og:image:alt", content: `${PRODUCT_FORMAL_NAME} - ${PRODUCT_TAGLINE}` },
   { name: "twitter:card", content: "summary_large_image" },
-  { name: "twitter:image", content: "https://app.plane.so/og-image.png" },
+  { name: "twitter:image", content: "/pranala-mark.svg" },
   { name: "twitter:image:width", content: "1200" },
   { name: "twitter:image:height", content: "630" },
-  { name: "twitter:image:alt", content: "Plane - Modern project management" },
+  { name: "twitter:image:alt", content: `${PRODUCT_FORMAL_NAME} - ${PRODUCT_TAGLINE}` },
 ];
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -62,20 +61,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <head>
         <meta name="theme-color" content="#fff" />
-        <link rel="icon" type="image/png" sizes="32x32" href={favicon32} />
-        <link rel="icon" type="image/png" sizes="16x16" href={favicon16} />
+        <link rel="icon" type="image/svg+xml" href="/pranala-mark.svg" />
         <link rel="manifest" href="/site.webmanifest.json" />
-        <link rel="shortcut icon" href={faviconIco} />
+        <link rel="shortcut icon" href="/pranala-mark.svg" />
         {/* Meta info for PWA */}
-        <meta name="application-name" content="Plane" />
+        <meta name="application-name" content={PRODUCT_NAME} />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <meta name="apple-mobile-web-app-title" content={SITE_NAME} />
         <meta name="format-detection" content="telephone=no" />
         <meta name="mobile-web-app-capable" content="yes" />
-        <link rel="apple-touch-icon" href={icon512} />
-        <link rel="apple-touch-icon" sizes="180x180" href={icon180} />
-        <link rel="apple-touch-icon" sizes="512x512" href={icon512} />
+        <link rel="apple-touch-icon" href="/pranala-mark.svg" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/pranala-mark.svg" />
+        <link rel="apple-touch-icon" sizes="512x512" href="/pranala-mark.svg" />
         <link rel="manifest" href="/manifest.json" />
       </head>
       <body>

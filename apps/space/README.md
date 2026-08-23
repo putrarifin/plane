@@ -1,10 +1,10 @@
 <br /><br />
 
 <p align="center">
-<a href="https://plane.so">
-  <img src="https://plane-marketing.s3.ap-south-1.amazonaws.com/plane-readme/plane_logo_.webp" alt="Plane Logo" width="70">
+<a href="https://github.com/putrarifin/plane">
+  <img src="https://raw.githubusercontent.com/putrarifin/plane/custom-ui-v1.3.0/apps/space/public/pranala-mark.svg" alt="Pranala mark" width="70">
 </a>
 </p>
 
-<h3 align="center"><b>Plane Space</b></h3>
-<p align="center"><b>Open-source, self-hosted project planning tool</b></p>
+<h3 align="center"><b>Pranala Work Space</b></h3>
+<p align="center"><b>AGPL-3.0 licensed, self-hosted publishing surface</b></p>

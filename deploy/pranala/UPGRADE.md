@@ -10,6 +10,8 @@ Target: seluruh service aplikasi Plane v1.4.2. Image web memakai source Pranala 
 - `pnpm turbo run check:types check:lint --filter=web...`: 32 task lolos.
 - `node --experimental-strip-types --test tests/pranala/customizations.test.mjs`: 4 tes lolos.
 - Build Docker `linux/amd64` lolos.
+- Fork memakai patch ProseMirror View 1.42.3 untuk kerentanan paste HTML (GHSA-c8x8-7fp4-3x9w) dan markdown-it 14.3.2 untuk perbaikan parser. Keduanya mempertahankan major version dari v1.4.2.
+- Audit seluruh workspace masih melaporkan advisori dependency upstream, termasuk dependency Node pada service live resmi dan tooling build. Image web adalah aset statis yang dilayani nginx. Temuan `proxy-addr` bergantung pada konfigurasi trust subnet IPv6 tertentu; source live v1.4.2 tidak mengatur `trust proxy`. Ini bukan klaim seluruh image resmi bebas advisori; pembaruan security upstream tetap perlu dipantau.
 - Hook upstream `lint-staged --deny-warnings` tidak konsisten dengan baseline lint proyek. Perbandingan file yang sama menunjukkan 42 warning upstream, 40 warning pada fork, dan tidak ada warning baru. Commit merge melewati hook tersebut setelah gate proyek dan perbandingan baseline lolos; konfigurasi lint tidak diturunkan.
 
 ## Backup dan latihan migrasi

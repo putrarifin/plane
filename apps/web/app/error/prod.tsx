@@ -5,6 +5,7 @@
  */
 
 import { useTheme } from "next-themes";
+import { SOURCE_ISSUES_URL, SOURCE_REPOSITORY_URL, SUPPORT_EMAIL } from "@plane/constants";
 // plane imports
 import { Button } from "@plane/propel/button";
 // assets
@@ -14,21 +15,9 @@ import maintenanceModeLightModeImage from "@/app/assets/instance/maintenance-mod
 import DefaultLayout from "@/layouts/default-layout";
 
 const linkMap = [
-  {
-    key: "mail_to",
-    label: "Contact Support",
-    value: "mailto:support@plane.so",
-  },
-  {
-    key: "status",
-    label: "Status Page",
-    value: "https://status.plane.so/",
-  },
-  {
-    key: "twitter_handle",
-    label: "@planepowers",
-    value: "https://x.com/planepowers",
-  },
+  ...(SUPPORT_EMAIL ? [{ key: "mail_to", label: "Contact support", value: `mailto:${SUPPORT_EMAIL}` }] : []),
+  { key: "report_issue", label: "Report an issue", value: SOURCE_ISSUES_URL },
+  { key: "source", label: "Source code", value: SOURCE_REPOSITORY_URL },
 ];
 
 // Production Error Component

@@ -41,11 +41,11 @@
     },
     "preferences": {
       "heading": "Preferensi",
-      "description": "Sesuaikan pengalaman aplikasi Anda dengan cara kerja Anda"
+      "description": "Sesuaikan pengalaman aplikasi dengan cara kerja Anda."
     },
     "notifications": {
       "heading": "Notifikasi email",
-      "description": "Tetap terupdate tentang item kerja yang Anda langgani. Aktifkan ini untuk mendapatkan notifikasi.",
+      "description": "Dapatkan pembaruan tentang item kerja yang Anda ikuti. Aktifkan untuk menerima notifikasi.",
       "select_default_view": "Pilih tampilan default",
       "compact": "Ringkas",
       "full": "Layar penuh"
@@ -55,11 +55,11 @@
     },
     "api_tokens": {
       "title": "Token Akses Personal",
-      "description": "Hasilkan token API yang aman untuk mengintegrasikan data Anda dengan sistem dan aplikasi eksternal."
+      "description": "Buat token API yang aman untuk mengintegrasikan data dengan sistem dan aplikasi eksternal."
     },
     "activity": {
       "heading": "Aktivitas",
-      "description": "Lacak tindakan dan perubahan terkini Anda di semua proyek dan item kerja."
+      "description": "Lacak tindakan dan perubahan terbaru Anda di semua proyek dan item kerja."
     },
     "connections": {
       "title": "Koneksi",
@@ -80,7 +80,7 @@
       "overview": "Ikhtisar",
       "created": "Item kerja yang dibuat",
       "assigned": "Item kerja yang ditugaskan",
-      "subscribed": "Item kerja yang disubscribe",
+      "subscribed": "Item kerja yang diikuti",
       "state_distribution": {
         "title": "Item kerja berdasarkan status",
         "empty": "Buat item kerja untuk melihatnya berdasarkan status dalam grafik untuk analisis yang lebih baik."
@@ -102,32 +102,32 @@
       "activity": "Aktivitas",
       "preferences": "Preferensi",
       "notifications": "Notifikasi",
-      "api-tokens": "Token Akses Personal",
+      "api-tokens": "Token akses pribadi",
       "connections": "Koneksi"
     },
     "tabs": {
       "summary": "Ringkasan",
       "assigned": "Ditugaskan",
       "created": "Dibuat",
-      "subscribed": "Disubscribe",
+      "subscribed": "Diikuti",
       "activity": "Aktivitas"
     },
     "empty_state": {
       "activity": {
         "title": "Belum ada aktivitas",
-        "description": "Mulai dengan membuat item kerja baru! Tambahkan detail dan properti. Jelajahi lebih lanjut di Plane untuk melihat aktivitas Anda."
+        "description": "Mulai dengan membuat item kerja baru! Tambahkan detail dan properti. Jelajahi lebih lanjut di Pranala untuk melihat aktivitas Anda."
       },
       "assigned": {
         "title": "Tidak ada item kerja yang ditugaskan kepada Anda",
-        "description": "Item kerja yang ditugaskan kepada Anda dapat dilacak dari sini."
+        "description": "Item kerja yang ditugaskan kepada Anda dapat dilacak di sini."
       },
       "created": {
         "title": "Belum ada item kerja",
-        "description": "Semua item kerja yang dibuat oleh Anda hadir di sini, dan lacak langsung di sini."
+        "description": "Semua item kerja yang Anda buat akan muncul di sini. Lacak langsung dari sini."
       },
       "subscribed": {
         "title": "Belum ada item kerja",
-        "description": "Langganan item kerja yang Anda minati, lacak semuanya di sini."
+        "description": "Ikuti item kerja yang Anda minati dan lacak semuanya di sini."
       }
     }
   },
@@ -137,13 +137,13 @@
         "label": "Preferensi sistem"
       },
       "light": {
-        "label": "Cerah"
+        "label": "Terang"
       },
       "dark": {
         "label": "Gelap"
       },
       "light_contrast": {
-        "label": "Cerah kontras tinggi"
+        "label": "Terang dengan kontras tinggi"
       },
       "dark_contrast": {
         "label": "Gelap kontras tinggi"

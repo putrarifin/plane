@@ -15,11 +15,11 @@
     "no_matching_cycles": "Tidak ada siklus yang cocok",
     "remove_filters_to_see_all_cycles": "Hapus filter untuk melihat semua siklus",
     "remove_search_criteria_to_see_all_cycles": "Hapus kriteria pencarian untuk melihat semua siklus",
-    "only_completed_cycles_can_be_archived": "Hanya siklus yang diselesaikan yang dapat diarsipkan",
+    "only_completed_cycles_can_be_archived": "Hanya siklus yang sudah selesai yang dapat diarsipkan",
     "start_date": "Tanggal mulai",
-    "end_date": "Tanggal akhir",
-    "in_your_timezone": "Di zona waktu Anda",
-    "transfer_work_items": "Transfer {count} item kerja",
+    "end_date": "Tanggal selesai",
+    "in_your_timezone": "Dalam zona waktu Anda",
+    "transfer_work_items": "Pindahkan {count} item kerja",
     "transfer": {
       "no_cycles_available": "Tidak ada siklus lain yang tersedia untuk mentransfer item pekerjaan."
     },
@@ -30,7 +30,7 @@
       "progress": "Kemajuan",
       "chart": "Grafik burndown",
       "priority_issue": "Item kerja prioritas",
-      "assignees": "Penugasan",
+      "assignees": "Penanggung jawab",
       "issue_burndown": "Burndown item kerja",
       "ideal": "Ideal",
       "current": "Sekarang",
@@ -67,7 +67,7 @@
         "loading": "Menambahkan siklus ke favorit",
         "success": {
           "description": "Siklus ditambahkan ke favorit.",
-          "title": "Sukses!"
+          "title": "Berhasil!"
         },
         "failed": {
           "description": "Gagal menambahkan siklus ke favorit. Silakan coba lagi.",
@@ -78,7 +78,7 @@
         "loading": "Menghapus siklus dari favorit",
         "success": {
           "description": "Siklus dihapus dari favorit.",
-          "title": "Sukses!"
+          "title": "Berhasil!"
         },
         "failed": {
           "description": "Gagal menghapus siklus dari favorit. Silakan coba lagi.",
@@ -89,21 +89,21 @@
         "loading": "Memperbarui siklus",
         "success": {
           "description": "Siklus berhasil diperbarui.",
-          "title": "Sukses!"
+          "title": "Berhasil!"
         },
         "failed": {
           "description": "Kesalahan saat memperbarui siklus. Silakan coba lagi.",
           "title": "Kesalahan!"
         },
         "error": {
-          "already_exists": "Anda sudah memiliki siklus pada tanggal yang diberikan, jika Anda ingin membuat siklus draf, Anda dapat melakukannya dengan menghapus kedua tanggal tersebut."
+          "already_exists": "Anda sudah memiliki siklus pada tanggal tersebut. Jika ingin membuat siklus draf, hapus kedua tanggalnya."
         }
       }
     },
     "empty_state": {
       "general": {
-        "title": "Kelompokkan dan bagi pekerjaan Anda dalam Siklus.",
-        "description": "Pecah pekerjaan menjadi bagian yang dibatasi waktu, kerjakan mundur dari tenggat waktu proyek Anda untuk menetapkan tanggal, dan buat kemajuan nyata sebagai tim.",
+        "title": "Kelompokkan pekerjaan dan atur batas waktunya dalam siklus.",
+        "description": "Pecah pekerjaan menjadi bagian-bagian berbatas waktu. Tentukan tanggal dengan menghitung mundur dari tenggat proyek, lalu capai kemajuan nyata bersama tim.",
         "primary_button": {
           "text": "Tetapkan siklus pertama Anda",
           "comic": {
@@ -191,12 +191,12 @@
     "empty_state": {
       "no_issues": {
         "title": "Buat item kerja dan tugaskan kepada seseorang, bahkan kepada diri Anda sendiri",
-        "description": "Anggap item kerja sebagai pekerjaan, tugas, atau JTBD. Yang kami suka. Item kerja dan sub-item kerjanya biasanya merupakan tindakan berbasis waktu yang ditugaskan kepada anggota tim Anda. Tim Anda membuat, menetapkan, dan menyelesaikan item kerja untuk memindahkan proyek Anda menuju tujuannya.",
+        "description": "Anggap item kerja sebagai pekerjaan, tugas, atau JTBD—istilah yang kami sukai. Item kerja dan sub-itemnya biasanya merupakan tindakan berbatas waktu yang ditugaskan kepada anggota tim. Tim Anda membuat, menugaskan, dan menyelesaikan item kerja untuk mencapai tujuan proyek.",
         "primary_button": {
           "text": "Buat item kerja pertama Anda",
           "comic": {
-            "title": "Item kerja adalah blok bangunan di Plane.",
-            "description": "Mendesain ulang UI Plane, Mengganti merek perusahaan, atau Meluncurkan sistem injeksi bahan bakar baru adalah contoh item kerja yang kemungkinan besar memiliki sub-item kerja."
+            "title": "Item kerja adalah blok bangunan di Pranala.",
+            "description": "Mendesain ulang UI Pranala, Mengganti merek perusahaan, atau Meluncurkan sistem injeksi bahan bakar baru adalah contoh item kerja yang kemungkinan besar memiliki sub-item kerja."
           }
         }
       },
@@ -208,7 +208,7 @@
         }
       },
       "issues_empty_filter": {
-        "title": "Tidak ada item kerja ditemukan yang cocok dengan filter yang diterapkan",
+        "title": "Tidak ditemukan item kerja yang cocok dengan filter yang diterapkan",
         "secondary_button": {
           "text": "Bersihkan semua filter"
         }
@@ -224,8 +224,8 @@
     "delete_module": "Hapus modul",
     "empty_state": {
       "general": {
-        "title": "Peta tonggak proyek Anda ke Modul dan lacak pekerjaan terakumulasi dengan mudah.",
-        "description": "Sekelompok item kerja yang tergolong dalam induk yang logis dan hierarkis membentuk satu modul. Anggap saja mereka sebagai cara untuk melacak pekerjaan berdasarkan tonggak proyek. Mereka memiliki periode dan tenggat waktu sendiri serta analitik untuk membantu Anda melihat seberapa dekat atau jauh Anda dari tonggak tersebut.",
+        "title": "Petakan tonggak proyek ke modul dan lacak total pekerjaan dengan lebih mudah.",
+        "description": "Modul adalah sekumpulan item kerja yang berada di bawah satu induk dengan struktur yang jelas. Gunakan modul untuk melacak pekerjaan berdasarkan tonggak proyek, lengkap dengan periode, tenggat waktu, dan analitiknya.",
         "primary_button": {
           "text": "Buat modul pertama Anda",
           "comic": {
@@ -271,15 +271,15 @@
   "project_page": {
     "empty_state": {
       "general": {
-        "title": "Tulis catatan, dokumen, atau seluruh basis pengetahuan. Dapatkan Galileo, asisten AI Plane, untuk membantu Anda memulai",
-        "description": "Halaman adalah ruang pemikiran di Plane. Catat notul rapat, format dengan mudah, sertakan item kerja, tata letak menggunakan perpustakaan komponen, dan simpan semua di dalam konteks proyek Anda. Untuk menyelesaikan dokumen dengan cepat, panggil Galileo, AI Plane, dengan pintasan atau dengan mengklik tombol.",
+        "title": "Tulis catatan, dokumen, atau seluruh basis pengetahuan. Dapatkan Galileo, asisten AI Pranala, untuk membantu Anda memulai",
+        "description": "Halaman adalah ruang untuk menuangkan ide di Pranala. Tulis notulen rapat, format dengan mudah, sematkan item kerja, susun dengan komponen siap pakai, dan simpan semuanya dalam konteks proyek Anda. Untuk menyelesaikan dokumen lebih cepat, panggil Galileo, asisten AI Pranala, lewat pintasan atau tombol.",
         "primary_button": {
           "text": "Buat halaman pertama Anda"
         }
       },
       "private": {
         "title": "Belum ada halaman pribadi",
-        "description": "Simpan pemikiran pribadi Anda di sini. Ketika Anda sudah siap untuk berbagi, tim hanya seklik jarak.",
+        "description": "Simpan pemikiran pribadi Anda di sini. Saat siap berbagi, tim Anda dapat mengaksesnya dengan satu klik.",
         "primary_button": {
           "text": "Buat halaman pertama Anda"
         }
@@ -293,7 +293,7 @@
       },
       "archived": {
         "title": "Belum ada halaman yang diarsipkan",
-        "description": "Arsipkan halaman yang tidak ada dalam radar Anda. Akses di sini saat diperlukan."
+        "description": "Arsipkan halaman yang sedang tidak Anda pantau. Akses kembali di sini saat diperlukan."
       }
     }
   },
@@ -301,35 +301,35 @@
     "empty_state": {
       "inbox": {
         "title": "Intake tidak diaktifkan untuk proyek ini.",
-        "description": "Intake membantu Anda mengelola permintaan yang masuk ke proyek Anda dan menambahkannya sebagai item kerja dalam alur kerja Anda. Aktifkan intake dari pengaturan proyek untuk mengelola permintaan.",
+        "description": "Intake membantu Anda mengelola permintaan yang masuk ke proyek Anda dan menambahkannya sebagai item kerja dalam alur kerja Anda. Aktifkan Intake dari pengaturan proyek untuk mengelola permintaan.",
         "primary_button": {
           "text": "Kelola fitur"
         }
       },
       "cycle": {
         "title": "Siklus tidak diaktifkan untuk proyek ini.",
-        "description": "Pecah pekerjaan menjadi bagian yang dibatasi waktu, kerjakan mundur dari tenggat waktu proyek Anda untuk menetapkan tanggal, dan buat kemajuan nyata sebagai tim. Aktifkan fitur siklus untuk proyek Anda agar dapat mulai menggunakannya.",
+        "description": "Pecah pekerjaan menjadi bagian-bagian berbatas waktu. Tentukan tanggal dengan menghitung mundur dari tenggat proyek, lalu capai kemajuan nyata bersama tim. Aktifkan fitur siklus untuk proyek Anda agar dapat mulai menggunakannya.",
         "primary_button": {
           "text": "Kelola fitur"
         }
       },
       "module": {
         "title": "Modul tidak diaktifkan untuk proyek ini.",
-        "description": "Modul adalah blok bangunan dari proyek Anda. Aktifkan modul dari pengaturan proyek untuk mulai menggunakannya.",
+        "description": "Modul adalah bagian penting dari proyek Anda. Aktifkan modul dari pengaturan proyek untuk mulai menggunakannya.",
         "primary_button": {
           "text": "Kelola fitur"
         }
       },
       "page": {
         "title": "Halaman tidak diaktifkan untuk proyek ini.",
-        "description": "Halaman adalah blok bangunan dari proyek Anda. Aktifkan halaman dari pengaturan proyek untuk mulai menggunakannya.",
+        "description": "Halaman adalah bagian penting dari proyek Anda. Aktifkan halaman dari pengaturan proyek untuk mulai menggunakannya.",
         "primary_button": {
           "text": "Kelola fitur"
         }
       },
       "view": {
         "title": "Tampilan tidak diaktifkan untuk proyek ini.",
-        "description": "Tampilan adalah blok bangunan dari proyek Anda. Aktifkan tampilan dari pengaturan proyek untuk mulai menggunakannya.",
+        "description": "Tampilan membantu Anda mengatur pekerjaan dalam proyek. Aktifkan tampilan dari pengaturan proyek untuk mulai menggunakannya.",
         "primary_button": {
           "text": "Kelola fitur"
         }

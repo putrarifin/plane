@@ -10,7 +10,7 @@
       },
       "delete_project": {
         "title": "Hapus proyek",
-        "description": "Ketika menghapus proyek, semua data dan sumber daya di dalam proyek tersebut akan dihapus secara permanen dan tidak dapat dipulihkan.",
+        "description": "Saat proyek dihapus, semua data dan sumber dayanya akan dihapus permanen dan tidak dapat dipulihkan.",
         "button": "Hapus proyek saya"
       },
       "toast": {
@@ -22,7 +22,7 @@
       "label": "Anggota",
       "project_lead": "Pemimpin proyek",
       "project_lead_description": "Pilih pimpinan proyek untuk proyek ini.",
-      "default_assignee": "Penugas default",
+      "default_assignee": "Penanggung jawab default",
       "default_assignee_description": "Pilih penerima tugas default untuk proyek ini.",
       "project_subscribers": "Pelanggan proyek",
       "project_subscribers_description": "Pilih anggota yang akan menerima notifikasi untuk proyek ini.",
@@ -38,7 +38,7 @@
     },
     "states": {
       "heading": "Status",
-      "description": "Tentukan dan sesuaikan status alur kerja untuk melacak kemajuan item kerja Anda.",
+      "description": "Tentukan dan sesuaikan status alur kerja untuk melacak kemajuan item kerja.",
       "describe_this_state_for_your_members": "Jelaskan status ini untuk anggota Anda.",
       "empty_state": {
         "title": "Tidak ada status yang tersedia untuk grup {groupKey}",
@@ -47,7 +47,7 @@
     },
     "labels": {
       "heading": "Label",
-      "description": "Buat label kustom untuk mengkategorikan dan mengatur item kerja Anda",
+      "description": "Buat label khusus untuk mengategorikan dan mengatur item kerja.",
       "label_title": "Judul label",
       "label_title_is_required": "Judul label diperlukan",
       "label_max_char": "Nama label tidak boleh lebih dari 255 karakter",
@@ -56,57 +56,57 @@
       }
     },
     "estimates": {
-      "heading": "Perkiraan",
+      "heading": "Estimasi",
       "description": "Ini membantu Anda dalam mengkomunikasikan kompleksitas dan beban kerja tim.",
-      "label": "Perkiraan",
-      "title": "Aktifkan perkiraan untuk proyek saya",
-      "enable_description": "Ini membantu Anda dalam mengkomunikasikan kompleksitas dan beban kerja tim.",
-      "no_estimate": "Tidak ada perkiraan",
-      "new": "Sistem perkiraan baru",
+      "label": "Estimasi",
+      "title": "Aktifkan estimasi untuk proyek saya",
+      "enable_description": "Estimasi membantu Anda mengomunikasikan kompleksitas dan beban kerja tim.",
+      "no_estimate": "Tidak ada estimasi",
+      "new": "Sistem estimasi baru",
       "create": {
         "custom": "Kustom",
         "start_from_scratch": "Mulai dari awal",
         "choose_template": "Pilih template",
-        "choose_estimate_system": "Pilih sistem perkiraan",
-        "enter_estimate_point": "Masukkan perkiraan",
+        "choose_estimate_system": "Pilih sistem estimasi",
+        "enter_estimate_point": "Masukkan estimasi",
         "step": "Langkah {step} dari {total}",
-        "label": "Buat perkiraan"
+        "label": "Buat estimasi"
       },
       "toasts": {
         "created": {
           "success": {
-            "title": "Perkiraan dibuat",
-            "message": "Perkiraan telah berhasil dibuat"
+            "title": "Estimasi dibuat",
+            "message": "Estimasi telah berhasil dibuat"
           },
           "error": {
-            "title": "Pembuatan perkiraan gagal",
-            "message": "Kami tidak dapat membuat perkiraan baru, silakan coba lagi."
+            "title": "Pembuatan estimasi gagal",
+            "message": "Kami tidak dapat membuat estimasi baru, silakan coba lagi."
           }
         },
         "updated": {
           "success": {
-            "title": "Perkiraan dimodifikasi",
-            "message": "Perkiraan telah diperbarui dalam proyek Anda."
+            "title": "Estimasi dimodifikasi",
+            "message": "Estimasi telah diperbarui dalam proyek Anda."
           },
           "error": {
-            "title": "Modifikasi perkiraan gagal",
-            "message": "Kami tidak dapat memodifikasi perkiraan, silakan coba lagi"
+            "title": "Modifikasi estimasi gagal",
+            "message": "Kami tidak dapat memodifikasi estimasi, silakan coba lagi"
           }
         },
         "enabled": {
           "success": {
             "title": "Berhasil!",
-            "message": "Perkiraan telah diaktifkan."
+            "message": "Estimasi telah diaktifkan."
           }
         },
         "disabled": {
           "success": {
             "title": "Berhasil!",
-            "message": "Perkiraan telah dinonaktifkan."
+            "message": "Estimasi telah dinonaktifkan."
           },
           "error": {
             "title": "Kesalahan!",
-            "message": "Perkiraan tidak dapat dinonaktifkan. Silakan coba lagi"
+            "message": "Estimasi tidak dapat dinonaktifkan. Silakan coba lagi"
           }
         },
         "reorder": {
@@ -131,14 +131,14 @@
         }
       },
       "validation": {
-        "min_length": "Perkiraan harus lebih besar dari 0.",
+        "min_length": "Estimasi harus lebih besar dari 0.",
         "unable_to_process": "Kami tidak dapat memproses permintaan Anda, silakan coba lagi.",
-        "numeric": "Perkiraan harus berupa nilai numerik.",
-        "character": "Perkiraan harus berupa nilai karakter.",
-        "empty": "Nilai perkiraan tidak boleh kosong.",
-        "already_exists": "Nilai perkiraan sudah ada.",
+        "numeric": "Estimasi harus berupa nilai numerik.",
+        "character": "Estimasi harus berupa nilai karakter.",
+        "empty": "Nilai estimasi tidak boleh kosong.",
+        "already_exists": "Nilai estimasi sudah ada.",
         "unsaved_changes": "Anda memiliki beberapa perubahan yang belum disimpan, Harap simpan sebelum mengklik selesai",
-        "remove_empty": "Perkiraan tidak boleh kosong. Masukkan nilai di setiap bidang atau hapus yang tidak memiliki nilai.",
+        "remove_empty": "Estimasi tidak boleh kosong. Masukkan nilai di setiap bidang atau hapus yang tidak memiliki nilai.",
         "fill": "Harap isi bidang estimasi ini",
         "repeat": "Nilai estimasi tidak boleh diulang"
       },
@@ -179,21 +179,21 @@
     "automations": {
       "label": "Otomatisasi",
       "heading": "Otomatisasi",
-      "description": "Konfigurasikan aksi otomatis untuk menyederhanakan alur kerja manajemen proyek Anda dan mengurangi tugas manual.",
+      "description": "Konfigurasikan tindakan otomatis untuk menyederhanakan alur kerja proyek dan mengurangi tugas manual.",
       "auto-archive": {
         "title": "Arsip otomatis item kerja yang ditutup",
-        "description": "Plane akan mengarsipkan secara otomatis item kerja yang telah selesai atau dibatalkan.",
+        "description": "Pranala akan mengarsipkan secara otomatis item kerja yang telah selesai atau dibatalkan.",
         "duration": "Arsip otomatis item kerja yang ditutup selama"
       },
       "auto-close": {
         "title": "Tutup otomatis item kerja",
-        "description": "Plane akan menutup secara otomatis item kerja yang belum selesai atau dibatalkan.",
+        "description": "Pranala akan menutup secara otomatis item kerja yang belum selesai atau dibatalkan.",
         "duration": "Tutup otomatis item kerja yang tidak aktif selama",
         "auto_close_status": "Status penutupan otomatis"
       },
       "auto-remind": {
         "title": "Pengingat otomatis",
-        "description": "Plane akan mengirim pengingat otomatis via email dan notifikasi dalam aplikasi untuk memantau kemajuan proyek Anda.",
+        "description": "Pranala akan mengirim pengingat otomatis via email dan notifikasi dalam aplikasi untuk memantau kemajuan proyek Anda.",
         "duration": "Kirim pengingat sebelum"
       }
     },
@@ -203,9 +203,9 @@
         "description": "Buat label untuk membantu mengatur dan memfilter item kerja dalam proyek Anda."
       },
       "estimates": {
-        "title": "Belum ada sistem perkiraan",
-        "description": "Buat serangkaian perkiraan untuk mengkomunikasikan jumlah pekerjaan per item kerja.",
-        "primary_button": "Tambah sistem perkiraan"
+        "title": "Belum ada sistem estimasi",
+        "description": "Buat serangkaian estimasi untuk mengkomunikasikan jumlah pekerjaan per item kerja.",
+        "primary_button": "Tambah sistem estimasi"
       },
       "integrations": {
         "title": "Tidak ada integrasi yang dikonfigurasi",
@@ -333,7 +333,7 @@
       "modules": {
         "title": "Modul",
         "short_title": "Modul",
-        "description": "Atur pekerjaan menjadi sub-proyek dengan pemimpin dan penerima tugas khusus.",
+        "description": "Atur pekerjaan ke dalam subproyek dengan pemimpin dan penanggung jawab khusus.",
         "toggle_title": "Aktifkan modul",
         "toggle_description": "Anggota proyek akan dapat membuat dan mengedit modul."
       },
@@ -354,11 +354,11 @@
       "intake": {
         "intake_responsibility": "Tanggung jawab penerimaan",
         "intake_sources": "Sumber penerimaan",
-        "title": "Penerimaan",
-        "short_title": "Penerimaan",
+        "title": "Intake",
+        "short_title": "Intake",
         "description": "Biarkan non-anggota berbagi bug, umpan balik, dan saran; tanpa mengganggu alur kerja Anda.",
-        "toggle_title": "Aktifkan penerimaan",
-        "toggle_description": "Izinkan anggota proyek membuat permintaan penerimaan dalam aplikasi.",
+        "toggle_title": "Aktifkan intake",
+        "toggle_description": "Izinkan anggota proyek membuat permintaan intake dalam aplikasi.",
         "toggle_tooltip_on": "Minta Admin Proyek untuk mengaktifkan ini.",
         "toggle_tooltip_off": "Minta Admin Proyek untuk menonaktifkan ini.",
         "notify_assignee": {
@@ -371,7 +371,7 @@
         },
         "email": {
           "title": "Email",
-          "description": "Kumpulkan item kerja baru dari siapa saja yang mengirim email ke alamat email Plane.",
+          "description": "Kumpulkan item kerja baru dari siapa saja yang mengirim email ke alamat email Pranala.",
           "fieldName": "ID Email"
         },
         "form": {

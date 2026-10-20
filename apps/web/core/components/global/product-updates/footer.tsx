@@ -4,8 +4,7 @@
  * See the LICENSE file for details.
  */
 
-import { USER_TRACKER_ELEMENTS } from "@plane/constants";
-import { useTranslation } from "@plane/i18n";
+import { SOURCE_LICENSE_URL, SOURCE_REPOSITORY_URL } from "@plane/constants";
 // ui
 import { getButtonStyling } from "@plane/propel/button";
 import { PlaneLogo } from "@plane/propel/icons";
@@ -13,55 +12,31 @@ import { PlaneLogo } from "@plane/propel/icons";
 import { cn } from "@plane/utils";
 
 export function ProductUpdatesFooter() {
-  const { t } = useTranslation();
   return (
     <div className="m-6 mb-4 flex flex-shrink-0 items-center justify-between gap-4">
       <div className="flex items-center gap-2">
         <a
-          href="https://go.plane.so/p-docs"
+          href={SOURCE_REPOSITORY_URL}
           target="_blank"
           className="text-13 text-secondary underline-offset-1 outline-none hover:text-primary hover:underline"
           rel="noreferrer"
         >
-          {t("docs")}
+          Source code
         </a>
-        <svg viewBox="0 0 2 2" className="h-0.5 w-0.5 fill-current">
+        <svg viewBox="0 0 2 2" className="h-0.5 w-0.5 fill-current" aria-hidden="true">
           <circle cx={1} cy={1} r={1} />
         </svg>
         <a
-          data-ph-element={USER_TRACKER_ELEMENTS.CHANGELOG_REDIRECTED}
-          href="https://go.plane.so/p-changelog"
+          href={SOURCE_LICENSE_URL}
           target="_blank"
           className="text-13 text-secondary underline-offset-1 outline-none hover:text-primary hover:underline"
           rel="noreferrer"
         >
-          {t("full_changelog")}
-        </a>
-        <svg viewBox="0 0 2 2" className="h-0.5 w-0.5 fill-current">
-          <circle cx={1} cy={1} r={1} />
-        </svg>
-        <a
-          href="mailto:support@plane.so"
-          target="_blank"
-          className="text-13 text-secondary underline-offset-1 outline-none hover:text-primary hover:underline"
-          rel="noreferrer"
-        >
-          {t("support")}
-        </a>
-        <svg viewBox="0 0 2 2" className="h-0.5 w-0.5 fill-current">
-          <circle cx={1} cy={1} r={1} />
-        </svg>
-        <a
-          href="https://forum.plane.so"
-          target="_blank"
-          className="text-13 text-secondary underline-offset-1 outline-none hover:text-primary hover:underline"
-          rel="noreferrer"
-        >
-          Forum
+          AGPL-3.0 license
         </a>
       </div>
       <a
-        href="https://plane.so/pages"
+        href={SOURCE_REPOSITORY_URL}
         target="_blank"
         className={cn(
           getButtonStyling("secondary", "base"),
@@ -69,8 +44,8 @@ export function ProductUpdatesFooter() {
         )}
         rel="noreferrer"
       >
-        <PlaneLogo className="h-4 w-auto text-primary" />
-        {t("powered_by_plane_pages")}
+        <PlaneLogo className="h-4 w-auto text-primary" aria-label="Pranala" />
+        Pranala Work
       </a>
     </div>
   );

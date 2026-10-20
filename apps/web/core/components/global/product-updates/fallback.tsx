@@ -5,6 +5,7 @@
  */
 
 import { EmptyStateDetailed } from "@plane/propel/empty-state";
+import { SOURCE_REPOSITORY_URL } from "@plane/constants";
 
 type TProductUpdatesFallbackProps = {
   description: string;
@@ -12,12 +13,7 @@ type TProductUpdatesFallbackProps = {
 };
 
 export function ProductUpdatesFallback(props: TProductUpdatesFallbackProps) {
-  const { description, variant } = props;
-  // derived values
-  const changelogUrl =
-    variant === "cloud"
-      ? "https://plane.so/changelog?category=cloud"
-      : "https://plane.so/changelog?category=self-hosted";
+  const { description } = props;
 
   return (
     <div className="py-8">
@@ -27,9 +23,9 @@ export function ProductUpdatesFallback(props: TProductUpdatesFallbackProps) {
         align="center"
         actions={[
           {
-            label: "Go to changelog",
+            label: "View source code",
             variant: "primary",
-            onClick: () => window.open(changelogUrl, "_blank"),
+            onClick: () => window.open(SOURCE_REPOSITORY_URL, "_blank", "noopener,noreferrer"),
           },
         ]}
       />

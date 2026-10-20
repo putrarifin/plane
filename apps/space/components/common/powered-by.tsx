@@ -4,9 +4,7 @@
  * See the LICENSE file for details.
  */
 
-import { WEBSITE_URL } from "@plane/constants";
-// assets
-import { PlaneLogo } from "@plane/propel/icons";
+import { PRODUCT_NAME, WEBSITE_URL } from "@plane/constants";
 
 type TPoweredBy = {
   disabled?: boolean;
@@ -25,9 +23,9 @@ export function PoweredBy(props: TPoweredBy) {
       target="_blank"
       rel="noreferrer noopener"
     >
-      <PlaneLogo className="h-3 w-auto text-primary" />
+      <img src="/pranala-mark.svg" alt="" aria-hidden="true" className="size-3 rounded-[2px]" />
       <div className="text-11">
-        Powered by <span className="font-semibold">Plane Publish</span>
+        Powered by <span className="font-semibold">{PRODUCT_NAME}</span>
       </div>
     </a>
   );

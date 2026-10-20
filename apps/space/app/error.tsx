@@ -6,6 +6,7 @@
 
 // ui
 import { Button } from "@plane/propel/button";
+import { SOURCE_ISSUES_URL, SOURCE_REPOSITORY_URL, SUPPORT_EMAIL } from "@plane/constants";
 
 function ErrorPage() {
   const handleRetry = () => {
@@ -18,14 +19,19 @@ function ErrorPage() {
         <div className="space-y-2">
           <h3 className="text-16 font-semibold">Yikes! That doesn{"'"}t look good.</h3>
           <p className="mx-auto text-13 text-secondary md:w-1/2">
-            That crashed Plane, pun intended. No worries, though. Our engineers have been notified. If you have more
-            details, please write to{" "}
-            <a href="mailto:support@plane.so" className="text-accent-primary">
-              support@plane.so
-            </a>{" "}
-            or on our{" "}
-            <a href="https://forum.plane.so" target="_blank" className="text-accent-primary" rel="noopener noreferrer">
-              Forum
+            That crashed Pranala. Our engineers have been notified. If you have more details, please{" "}
+            {SUPPORT_EMAIL ? (
+              <a href={`mailto:${SUPPORT_EMAIL}`} className="text-accent-primary">
+                contact support
+              </a>
+            ) : (
+              <a href={SOURCE_ISSUES_URL} target="_blank" className="text-accent-primary" rel="noopener noreferrer">
+                report an issue
+              </a>
+            )}{" "}
+            or review the{" "}
+            <a href={SOURCE_REPOSITORY_URL} target="_blank" className="text-accent-primary" rel="noopener noreferrer">
+              source code
             </a>
             .
           </p>

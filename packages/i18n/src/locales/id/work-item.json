@@ -15,7 +15,7 @@
         "success": "{count, plural, one {Item Kerja} other {Item Kerja}} berhasil ditambahkan ke siklus.",
         "loading": "Menambahkan {count, plural, one {item kerja} other {item kerja}} ke siklus"
       },
-      "assignee": "Tambah penugasan",
+      "assignee": "Tambahkan penanggung jawab",
       "start_date": "Tambah tanggal mulai",
       "due_date": "Tambah tanggal jatuh tempo",
       "parent": "Tambah item kerja induk",
@@ -71,16 +71,16 @@
     "layouts": {
       "ordered_by_label": "Tata letak ini diurutkan berdasarkan",
       "list": "Daftar",
-      "kanban": "Papan",
+      "kanban": "Kanban",
       "calendar": "Kalender",
       "spreadsheet": "Tabel",
-      "gantt": "Garis Waktu",
+      "gantt": "Gantt",
       "title": {
         "list": "Tata Letak Daftar",
-        "kanban": "Tata Letak Papan",
+        "kanban": "Tata letak Kanban",
         "calendar": "Tata Letak Kalender",
         "spreadsheet": "Tata Letak Tabel",
-        "gantt": "Tata Letak Garis Waktu"
+        "gantt": "Tata letak Gantt"
       }
     },
     "states": {
@@ -167,7 +167,7 @@
       "label": "Arsip Item kerja",
       "confirm_message": "Apakah Anda yakin ingin mengarsipkan item kerja ini? Semua item kerja yang diarsipkan dapat dipulihkan nanti.",
       "success": {
-        "label": "Sukses mengarsipkan",
+        "label": "Berhasil mengarsipkan",
         "message": "Arsip Anda dapat ditemukan di arsip proyek."
       },
       "failed": {
@@ -176,7 +176,7 @@
     },
     "restore": {
       "success": {
-        "title": "Sukses memulihkan",
+        "title": "Berhasil memulihkan",
         "message": "Item kerja Anda dapat ditemukan di item kerja proyek."
       },
       "failed": {
@@ -202,8 +202,8 @@
     },
     "subscription": {
       "actions": {
-        "subscribed": "Item kerja telah berhasil disubscribe",
-        "unsubscribed": "Item kerja telah berhasil dibatalkan subscribe"
+        "subscribed": "Item kerja berhasil diikuti",
+        "unsubscribed": "Item kerja tidak lagi diikuti"
       }
     },
     "select": {
@@ -293,10 +293,10 @@
   "issue_relation": {
     "empty_state": {
       "search": {
-        "title": "Tidak ada item kerja yang cocok ditemukan"
+        "title": "Tidak ditemukan item kerja yang cocok"
       },
       "no_issues": {
-        "title": "Tidak ada item kerja ditemukan"
+        "title": "Tidak ditemukan item kerja"
       }
     }
   },
@@ -304,7 +304,7 @@
     "empty_state": {
       "general": {
         "title": "Belum ada komentar",
-        "description": "Komentar dapat digunakan sebagai ruang diskusi dan tindak lanjut untuk item kerja"
+        "description": "Komentar dapat digunakan sebagai ruang diskusi dan tindak lanjut untuk item kerja."
       }
     }
   },

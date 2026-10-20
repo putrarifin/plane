@@ -2,6 +2,14 @@
 
 Target: seluruh service aplikasi Plane v1.4.2. Image web memakai source Pranala di branch `codex/upgrade-plane-v1.4.2`; API, worker, beat-worker, migrator, admin, space, live, dan proxy memakai image resmi. PostgreSQL 15.7, Valkey 7.2.11, RabbitMQ 3.13.6, dan pgsty MinIO `RELEASE.2026-08-04T00-00-00Z` mengikuti compose resmi v1.4.2.
 
+## Rilis terverifikasi
+
+Frontend: `kodock.komar.id/plane-frontend:v1.4.2-custom.002`, source `d3bb7fbd041d1bca6397fbf16ddea24ff2946cfc`, digest registry `sha256:22350a34f106c975129b45dbbc4e775a0f061b7b656b4e082c7bea54a58b53e7`. Artifact amd64 dan checksum tersedia di [rilis fork](https://github.com/putrarifin/plane/releases/tag/pranala-v1.4.2-custom.002).
+
+Cutover seluruh stack berhasil: 12 service utama healthy, migrator exit 0, dan `APP_RELEASE` API v1.4.2. Backup awal dan backup final keduanya lolos restore terisolasi, migrasi, serta verifikasi objek dengan MinIO target. Sesi pengguna, proyek, halaman lama, dan render Mermaid melalui editor produksi telah diverifikasi. Isian editor untuk uji dibuang tanpa membuat item kerja.
+
+Di Coolify, pin image aplikasi dan nilai `APP_RELEASE` ke v1.4.2. Periksa generated Compose setelah mengubah environment agar nilai lama yang tersimpan tidak ikut dijalankan. Health check MinIO menggunakan `curl -f http://127.0.0.1:9000/minio/health/ready`.
+
 ## Verifikasi source
 
 - Riwayat fork v1.3.0 digabungkan ke tag upstream v1.4.2.

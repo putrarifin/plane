@@ -83,8 +83,16 @@ def discover(stack):
     return result
 
 
+def postgres_command(container, env, program, *arguments, interactive=False):
+    command = ["docker", "exec"]
+    if interactive:
+        command.append("-i")
+    return command + [container, "sh", "-c", 'export PGPASSWORD="$POSTGRES_PASSWORD"; exec "$@"',
+        "plane-pg-client", program, "-h", "127.0.0.1", "-U", env["POSTGRES_USER"], "-d", env["POSTGRES_DB"], *arguments]
+
+
 def database_counts(container, env):
-    command = ["docker", "exec", container, "psql", "-U", env["POSTGRES_USER"], "-d", env["POSTGRES_DB"], "-Atc"]
+    command = postgres_command(container, env, "psql", "-Atc")
     tables = run(*command, "SELECT tablename FROM pg_tables WHERE schemaname='public' ORDER BY tablename").splitlines()
     if not all(re.fullmatch(r"[a-zA-Z0-9_]+", name) for name in tables):
         raise RuntimeError("Unexpected table identifier")
@@ -149,7 +157,7 @@ def backup(stack, containers, quiesce=False):
                 run("docker", "stop", "-t", "60", containers[name]["Id"])
                 stopped.append(containers[name]["Id"])
         with (dest / "database.dump").open("wb") as stream:
-            run("docker", "exec", containers["plane-db"]["Id"], "pg_dump", "-U", db_env["POSTGRES_USER"], "-d", db_env["POSTGRES_DB"], "-Fc", stdout=stream)
+            run(*postgres_command(containers["plane-db"]["Id"], db_env, "pg_dump", "-Fc"), stdout=stream)
         if (dest / "database.dump").stat().st_size < 1024:
             raise RuntimeError("Database dump is unexpectedly small")
         archives = ["database.dump"]
@@ -189,11 +197,11 @@ def verify(dest):
             run("docker", "volume", "create", name)
         run("docker", "run", "-d", "--name", db, "--network", prefix, "--network-alias", "plane-db", "--env-file", str(dest / "db.env"), "-v", f"{db}:/var/lib/postgresql/data", "postgres:15.7-alpine")
         for _ in range(40):
-            if subprocess.run(["docker", "exec", db, "pg_isready", "-U", db_env["POSTGRES_USER"], "-d", db_env["POSTGRES_DB"]], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL).returncode == 0:
+            if subprocess.run(postgres_command(db, db_env, "pg_isready"), stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL).returncode == 0:
                 break
             time.sleep(2)
         with (dest / "database.dump").open("rb") as stream:
-            result = subprocess.run(["docker", "exec", "-i", db, "pg_restore", "--exit-on-error", "--no-owner", "--no-privileges", "-U", db_env["POSTGRES_USER"], "-d", db_env["POSTGRES_DB"]], stdin=stream, capture_output=True)
+            result = subprocess.run(postgres_command(db, db_env, "pg_restore", "--exit-on-error", "--no-owner", "--no-privileges", interactive=True), stdin=stream, capture_output=True)
         if result.returncode:
             (dest / "restore-error.private.log").write_bytes(result.stderr)
             raise RuntimeError("PostgreSQL restore failed; see private restore log")

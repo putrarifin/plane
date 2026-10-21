@@ -1,0 +1,11 @@
+FROM makeplane/plane-backend:v1.4.2
+ARG VCS_REF
+LABEL org.opencontainers.image.source="https://github.com/putrarifin/plane" \
+      org.opencontainers.image.revision="${VCS_REF}" \
+      org.opencontainers.image.version="v1.4.2-custom.001"
+
+# The official runtime and all dependencies remain unchanged. The overlay adds
+# API-key Pages routes using CE's existing project/page authorization policies.
+COPY apps/api/plane/api/views/page.py /code/plane/api/views/page.py
+COPY apps/api/plane/api/urls/page.py /code/plane/api/urls/page.py
+COPY apps/api/plane/api/urls/__init__.py /code/plane/api/urls/__init__.py

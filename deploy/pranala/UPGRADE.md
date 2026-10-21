@@ -1,6 +1,16 @@
 # Pranala Work — Plane CE v1.4.2
 
-Target: seluruh service aplikasi Plane v1.4.2. Image web memakai source Pranala di branch `codex/upgrade-plane-v1.4.2`; API, worker, beat-worker, migrator, admin, space, live, dan proxy memakai image resmi. PostgreSQL 15.7, Valkey 7.2.11, RabbitMQ 3.13.6, dan pgsty MinIO `RELEASE.2026-08-04T00-00-00Z` mengikuti compose resmi v1.4.2.
+Target: seluruh service aplikasi Plane v1.4.2. Image web memakai source Pranala di branch `codex/upgrade-plane-v1.4.2`; API memakai base resmi v1.4.2 dengan overlay Pages API. Worker, beat-worker, migrator, admin, space, live, dan proxy memakai image resmi. PostgreSQL 15.7, Valkey 7.2.11, RabbitMQ 3.13.6, dan pgsty MinIO `RELEASE.2026-08-04T00-00-00Z` mengikuti compose resmi v1.4.2.
+
+## Perbaikan hydration dan Pages MCP
+
+Fallback SPA menggunakan markup spinner yang sama pada HTML build dan render browser pertama, termasuk ketika tema telah tersimpan. Tes `apps/web/tests/hydration.test.mjs` menjalankan SSR dan hydration asli untuk tema light/dark dan menolak recoverable hydration errors.
+
+CE v1.4.2 belum menyediakan route Pages API-key yang dipakai SDK. Overlay `Dockerfile.api` menambahkan koleksi/detail halaman pada `/api/v1/workspaces/<slug>/pages/` dan `/api/v1/workspaces/<slug>/projects/<project_id>/pages/`. Workspace hanya mengagregasi halaman proyek yang dapat diakses; pembuatan halaman memerlukan proyek. Tidak ada perubahan schema database.
+
+Route memakai autentikasi dan throttle API-key existing, keanggotaan workspace/proyek aktif, batas akses halaman privat dan guest, serta sanitizer HTML existing. Tes kontrak PostgreSQL mencakup pagination, private/cross-project access, soft-deleted links, revoked membership/key, dan create ownership. Overlay hanya mengganti tiga file route/view; worker dan migrator tetap image resmi.
+
+`mcp_server.py` menjalankan upstream MCP 0.2.9/SDK 0.2.16/FastMCP 3.2.0 dengan konversi dictionary query ke `PaginatedQueryParams`. Pasang salinan script di lokasi stabil lokal, lalu ganti hanya executable launcher Plane pada konfigurasi MCP. Pertahankan prefix Keychain dan environment existing, simpan backup config privat, dan restart koneksi MCP. Jangan mengubah cache package uv bersama.
 
 ## Rilis terverifikasi
 

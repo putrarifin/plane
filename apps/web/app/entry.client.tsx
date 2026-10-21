@@ -4,11 +4,12 @@
  * See the LICENSE file for details.
  */
 
-import { startTransition, StrictMode } from "react";
+import { startTransition, StrictMode, useEffect } from "react";
 import { hydrateRoot } from "react-dom/client";
 import { HydratedRouter } from "react-router/dom";
 
 import polyfills from "@/lib/polyfills";
+import { prepareDocumentForHydration } from "@/lib/document-hydration";
 import { isStaleAssetErrorMessage, recoverFromStaleAsset } from "@/lib/stale-asset-error";
 
 void polyfills;
@@ -30,11 +31,19 @@ if (import.meta.env.PROD) {
   });
 }
 
+function HydrationComplete({ onHydrated }: { onHydrated: () => void }) {
+  useEffect(() => {
+    onHydrated();
+  }, [onHydrated]);
+  return <HydratedRouter />;
+}
+
 startTransition(() => {
+  const finish = prepareDocumentForHydration(document);
   hydrateRoot(
     document,
     <StrictMode>
-      <HydratedRouter />
+      <HydrationComplete onHydrated={finish} />
     </StrictMode>
   );
 });
